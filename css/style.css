@@ -1,0 +1,9 @@
+/* 全体設定 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+
+}
