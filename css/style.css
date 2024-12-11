@@ -3,6 +3,28 @@
     box-sizing: border-box;
 }
 
+/* Bodyの初期スタイル調整 */
 body {
     font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Noto Sans JP', sans-serif, 'Noto Serif JP', serif;
+    font-weight: 400;
+    color: #3C3C3C;
+    background-color: #F8F8F8;
+}
+
+/* 初期スタイル */
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    /* font-size: 32px; */
+    text-align: center;
+    color: #00B5CE;
+}
+
+h2 span {
+    font-size: 1rem;
 }
