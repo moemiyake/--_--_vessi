@@ -9,7 +9,7 @@ body {
     line-height: 1.5;
     font-family: 'Noto Sans JP', sans-serif, 'Noto Serif JP', serif,C;
     font-weight: 400;
-    color: #3C3C3C;
+    color: #6c6c6c;
     background-color: #F8F8F8;
 }
 
@@ -48,4 +48,9 @@ h3 {
     letter-spacing: 1.8px;
     font-weight: 400;
     /* ↑変えてもいい */
+}
+
+#about p {
+    font-size: 11px;
+    text-align: center;
 }
