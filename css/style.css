@@ -7,25 +7,45 @@
 body {
     font-size: 16px;
     line-height: 1.5;
-    font-family: 'Noto Sans JP', sans-serif, 'Noto Serif JP', serif;
+    font-family: 'Noto Sans JP', sans-serif, 'Noto Serif JP', serif,C;
     font-weight: 400;
     color: #3C3C3C;
     background-color: #F8F8F8;
 }
 
 /* 初期スタイル */
-h1 {
+h1,
+h2,
+h3 {
     text-align: center;
+}
+
+h1 {
+    font-family: 'Noto sans';
 }
 
 h2 {
-    font-size: 2rem;
-    /* font-size: 32px; */
-    text-align: center;
+    /* font-size: 2rem; */
+    font-size: 32px;
     color: #00B5CE;
+    line-height: 0.8;
+    font-family: 'Noto Sans JP';
+    font-weight: 400;
+    letter-spacing: 1.8px;
+
 }
 
 h2 span {
-    font-size: 1rem;
-    /* font-size: 16px; */
+    /* font-size: 1rem; */
+    font-size: 16px;
+    font-family: 'Noto sans';
+}
+
+h3 {
+    font-size: 18px;
+    font-family: 'Noto sans';
+    color: #005864;
+    letter-spacing: 1.8px;
+    font-weight: 400;
+    /* ↑変えてもいい */
 }
