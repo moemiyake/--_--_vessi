@@ -50,7 +50,25 @@ h3 {
     /* ↑変えてもいい */
 }
 
+h5 {
+    font-size: 12px;
+    color: #005864;
+}
+
 #about p {
     font-size: 11px;
     text-align: center;
+}
+
+#mv,footer {
+    background: #e4f4f8;
+}
+
+footer {
+    font-size: 10px;
+}
+
+.footermore ul {
+    list-style: inside;
+    list-style-type: "・　";
 }

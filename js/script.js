@@ -2,10 +2,6 @@
 const audio = new Audio("../music/01 Overture.mp3");
 
 
-// オーディオを連れてくる
-// const audio = document.querySelector("audio");
-
-
 //onボタンを連れてくる
 const on = document.querySelector("#on");
 //offボタンを連れてくる
