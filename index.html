@@ -15,7 +15,6 @@
 
 <body>
 
-
     <header>
         <!-- ⭐︎ヘッダー⭐︎ -->
         <!-- ⭐︎グローバルナビ？⭐︎ -->
@@ -23,48 +22,82 @@
 
     <main>
         <section id="bgm">
-            <!-- BGM -->
+            <!-- BGM再生 ON/OFF -->
             <p>このサイトは音が流れます <br>
                 ON/OFF お選びください</p>
             <button class="button-sound" id="on">ON</button>
             <button class="button-sound" id="off">OFF</button>
         </section>
 
+        <!-- トグルも付ける？ -->
+
 
         <section id="mv">
             <!-- ⭐︎メインビジュアル⭐︎ -->
-            <p class="txt-mv">雨の日のスニーカー</p>
-            <img src="#" alt="水を弾いているスニーカーの写真">
-            <h1><img src="#" alt="Vessiのロゴ"></h1>
+            <!-- ★写真、あとで明るく直す -->
+            <div class="mv-text">
+                <p class="catch-copy">雨の日のスニーカー</p>
+            </div>
+            <img class="mv-bg" src="img/メイン.png" alt="水を弾いているスニーカーの写真">
+            <h1><img class="mv-logo" src="img/VessiLogo-07.svg" alt="Vessiのロゴ"></h1>
 
-            <img src="#" alt="水玉">
+            <img src="img/水滴×3.png" alt="3つの水滴">
 
-            <div>
-                <img src="#" alt="ゆれ丸">
-                <p class="txt-catch">
+            <div class="mv-lead">
+                <img src="img/Liquid shape.png" alt="リキッドシェイプの背景">
+                <p class="lead-copy">
                     雨の日の、<br>
                     可愛い相棒。<br>
                     君がいると、<br>
                     足取り軽くなる。<br>
                 </p>
             </div>
-            <img src="#" alt="傘">
+
+            <img src="img/傘.png" alt="傘">
         </section>
 
-        <section id="lineup">
+        <section id="lineup" class="lineup-area">
             <!-- ⭐︎ラインナップ⭐︎ -->
-            <h2>
-                LINE UP<br>
-                <span>ラインナップ</span>
-            </h2>
+            <div class="lineup-content">
+                <div class="h2box">
+                    <h2>
+                        LINE UP<br>
+                        <span>ラインナップ</span>
+                    </h2>
+                </div>
+
+                <div class="product">
+                    <p>
+                        <img src="#" alt="Cityscape Sneaker">
+                </div>
+                <div class="product">
+                    <p>
+                        <img src="#" alt="Weekend Sneakers">
+                </div>
+                <div class="product">
+                    <p>
+                        <img src="#" alt="Stormburst">
+                </div>
+                <h2>Kid's</h2>
+                <div class="product">
+                    <p>
+                        <img src="#" alt="Weekend Sneaker">
+                </div>
+            </div>
+            <div class="btnbox"><a href="#" class="btn">VIEW MORE!</a></div>
+
         </section>
 
         <section id="about">
             <!-- ⭐︎Vessiとは？⭐︎ -->
-            <h2>
-                What's Vessi?<br>
-                <span>Vessiとは？</span>
-            </h2>
+            <div class="h2box">
+                <h2>
+                    What's Vessi?<br>
+                    <span>Vessiとは？</span>
+                </h2>
+            </div>
+
+            <img class="about-icon" src="img/100_water_proof.svg" alt="傘のアイコン">
             <h3>100%防水</h3>
             <p>
                 当社の Dyma-tex® テクノロジーにより、<br>
@@ -72,6 +105,8 @@
                 雪もぬかるみも泥もへっちゃらです。
             </p>
 
+
+            <img class="about-icon" src="img/cloud_like_comfort.svg" alt="雲のアイコン">
             <h3>雲みたいな履き心地</h3>
             <p>
                 防水性だけではありません。<br>
@@ -79,6 +114,7 @@
                 靴を脱ぎたくなくなるかも。
             </p>
 
+            <img class="about-icon" src="img/lightweight.svg" alt="羽のアイコン">
             <h3>軽量</h3>
             <p>
                 不格好なレインブーツに別れを告げましょう。<br>
@@ -86,41 +122,115 @@
                 忘れてしまうほどです。
             </p>
 
+            <img class="about-icon" src="img/vegan_material.svg" alt="新芽のアイコン">
             <h3>ビーガン素材</h3>
             <p>
                 私たちが作るものは、動物性製品を一切<br>
                 使用していないことをお約束します。
             </p>
+
+            <video src="video/AboutVessi.mp4" loop autoplay muted></video>
+
+
         </section>
+
         <section id="tecnology">
             <!-- ⭐︎テクノロジー⭐︎ -->
-            <h2>
-                TECNOLOGY<br>
-                <span>テクノロジー</span>
-            </h2>
+            <div class="h2box">
+                <h2>
+                    TECNOLOGY<br>
+                    <span>テクノロジー</span>
+                </h2>
+            </div>
+
+            <dl>
+                <div>
+                    <img src="img/vessiのテクノロジー1.webp" alt="マジックレイヤー">
+                    <dt>マジックレイヤー</dt>
+                    <dd>Dyma-tex としても知られる当社の特許取得済みの 100% 防水で通気性のあるニットは、夏は涼しく、冬は暖かく、一年中足元を快適に保ちます。</dd>
+                </div>
+                <div>
+                    <img src="img/vessiのテクノロジー2.webp" alt="クッション">
+                    <dt>クッション</dt>
+                    <dd>抗菌インソールは内部をフレッシュに、そしてクラウドサポートが快適な履き心地を保ちます。</dd>
+                </div>
+                <div>
+                    <img src="img/vessiのテクノロジー3.webp" alt="ソール">
+                    <dt>ソール</dt>
+                    <dd>超軽量で弾力性のあるヘリンボーングリップを備えたソールは、雨の日の地面の滑りにくさを保証します。</dd>
+                </div>
+            </dl>
+
+
         </section>
+
         <section id="style">
             <!-- ⭐︎ALL DAY STYLE⭐︎ -->
-            <h2>
-                ALL DAY STYLE<br>
-                <span>スタイル</span>
-            </h2>
+            <div class="h2box">
+                <h2>
+                    ALL DAY STYLE<br>
+                    <span>スタイル</span>
+                </h2>
+            </div>
+            <div class="btnbox"><a href="#" class="btn">VIEW MORE!</a></div>
         </section>
+
         <section id="question">
             <!-- ⭐︎Q&A⭐︎ -->
-            <h2>
-                Q&A<br>
-                <span>よくある質問</span>
-            </h2>
+            <div class="h2box">
+                <h2>
+                    Q&A<br>
+                    <span>よくある質問</span>
+                </h2>
+            </div>
+
+            <ul>
+                <li>
+                    <h4>本当に100%防水なんですか？</h4>
+                    <p>はい。でもコーティングではありません！
+                        私たちは、汗と熱を逃がす一体型の層を備えた特許取得済みのニット素材を開発しました。これにより、足の呼吸を妨げず、同時にあらゆる外的要素を遮断します。これで水たまりもへっちゃらです。
+                        どのように機能するのでしょうか?
+                        膜層には百万個の小さな穴があり、蒸気状の水（汗）と熱はその小さな穴を通過できますが、水分子は大きすぎて通過できません。またこれは防水加工が靴の寿命の間続くことを意味します...もちろん、素材に大きな穴を開けない限り！</p>
+                </li>
+                <li>
+                    <h4>環境に優しいですか？</h4>
+                    <p>靴産業は、大量のエネルギー、水、材料を消費するという罪を犯しています。しかし、Vessi では、私たちの価値観を反映し、環境への影響を最小限に抑える、思いやりのある製造慣行を開発しました。
+                        そのため、当社の製品はすべて完全にビーガンであり、水と材料の廃棄物を削減する方法で作られています。
+                        当社の特許取得済みの防水技術である Dyma-tex® は、有害な化学物質や一時的なコーティングを使用せずに作られています。その結果、PFA*フリーで耐久性の高い防水製品が誕生しました。これは、足での使用時間を増やし、埋め立て地に行く機会を削減することを意味します。
+                        私たちは二酸化炭素排出量を削減し、靴業界を浄化するための新しい方法に熱心に取り組んでいます。続報をお楽しみに！
+                        *フッ素樹脂の一種（パーフルオロアルコキシアルカン）</p>
+                </li>
+                <li>
+                    <h4>旅行に適していますか?</h4>
+                    <p>間違いありません！ — Vessi は、世界中を旅する冒険に最適なトラベル シューズです。
+                        非常に軽量で快適な履き心地で、スタイリングも簡単です。100% 耐候性なので、雨、雪、泥、ぬかるみ、バーの飲み物、ビーチの砂などを心配する必要はありません。
+                        私たちは、あなたとVessiシューズがどのように過ごしているかを知りたいと思っています。私たちのページであなたをフィーチャーできるように、ソーシャルサイトにて @vessi でぜひお知らせください。</p>
+                </li>
+                <li>
+                    <h4>Vessiはビーガンですか？</h4>
+                    <p>Vessi は 100% ビーガンで、生き物は含まれていません 🌱
+                        接着剤には水性接着剤を使用し、レザーとスエードはエンジニアリングの結晶です（つまり人工）。見える場所にも見えない場所にも動物性製品は一切含まれていません。</p>
+                </li>
+                <li>
+                    <h4>保証ポリシーは何ですか?</h4>
+                    <p>365 日保証。
+                        私たちはあなたとVessiが永遠に一緒にいることを望んでいます。だからこそ、私たちは品質と約束を守ります。すべての Vessi には、メーカーの欠陥に対して 1 年間の保証が付いています。
+                        Vessi を改造したり、強力な化学薬品にさらしたりすることによって発生した問題、または過度の磨耗によって欠陥が発生した場合には、弊社は補償できないことには注意してください。
+                        そうは言っても、あなたのVessiの様子がおかしいと思われる場合は、遠慮せずに連絡してお知らせください。喜んでご連絡させていただき、お客様のために何ができるかを確認させていただきます。
+                        保証請求を開始するには、まずこのフォームに記入してください。
+                        記入済みのフォームが当社に到着してから処理されるまで、最大 14 日ほどお待ちください。
+                        ※Vessi は、保証ポリシーの要件を満たさないクレームを拒否する権利を留保します。</p>
+                </li>
+            </ul>
+
 
         </section>
-
 
     </main>
 
-    <footer>
 
-        <div class="footermore">
+    <footer>
+        <div class="footer-more">
             <h5>View More Vessi</h5>
             <ul>
                 <li>誕生秘話</li>

@@ -32,7 +32,11 @@ h2 {
     font-family: 'Noto Sans JP';
     font-weight: 400;
     letter-spacing: 1.8px;
+}
 
+.h2box {
+    display: block;
+    margin: 50px auto;
 }
 
 h2 span {
@@ -68,7 +72,62 @@ footer {
     font-size: 10px;
 }
 
-.footermore ul {
+.footer-more ul {
     list-style: inside;
     list-style-type: "・　";
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+video {
+    width: 80vw;
+    height: auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* ボタンの設定 */
+
+.btnbox {
+    text-align: center;
+    width: auto;
+    /* height: auto; */
+}
+
+.btn {
+    text-decoration: none;
+    color: #00B5CE;
+    padding: 17px 38px;
+    font-size: 16px;
+    border: 1px solid #00B5CE;
+    border-radius: 30px;
+}
+
+.catch-copy {
+    font-family: "Noto Serif JP";
+    writing-mode: vertical-lr;
+    letter-spacing: 3px;
+    position: absolute;
+}
+
+.mv-bg {
+    width: 90vw;
+}
+
+.about-icon {
+    width: 20%;
 }
