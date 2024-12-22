@@ -32,23 +32,23 @@ const slide1 = new Swiper('#slide1', {
     },
     
 });
-window.addEventListener('load', function(){
-    initSwiper(); // ページ読み込み後に初期化
-  });
+// window.addEventListener('load', function(){
+//     initSwiper(); // ページ読み込み後に初期化
+//   });
 
 // ・ドラックしたときの調整
-// const slide1y = new Swiper('#slide1', {
-//   freeMode: {
-//     enabled: true,
-//     momentum: false,
-//   },
+const slide1y = new Swiper('#slide1', {
+  freeMode: {
+    enabled: true,
+    momentum: false,
+  },
   
-//   on: {
-//     touchEnd: (swiper) => {
-//       swiper.slideTo(swiper.activeIndex + 1);
-//     }
-//   }
-// });
+  on: {
+    touchEnd: (swiper) => {
+      swiper.slideTo(swiper.activeIndex + 1);
+    }
+  }
+});
 
 
 // slide2
@@ -62,9 +62,9 @@ const slide2 = new Swiper('#slide2', {
     },
     
 });
-window.addEventListener('load', function(){
-    initSwiper(); // ページ読み込み後に初期化
-  });
+// window.addEventListener('load', function(){
+//     initSwiper(); // ページ読み込み後に初期化
+//   });
 
 // ・ドラックしたときの調整
 const slide2y = new Swiper('#slide2', {
@@ -92,6 +92,20 @@ const slide3 = new Swiper('#slide3', {
     },
     
 });
-window.addEventListener('load', function(){
-    initSwiper(); // ページ読み込み後に初期化
-  });
+// window.addEventListener('load', function(){
+//     initSwiper(); // ページ読み込み後に初期化
+//   });
+
+// ・ドラックしたときの調整
+const slide3y = new Swiper('#slide3', {
+  freeMode: {
+    enabled: true,
+    momentum: false,
+  },
+  
+  on: {
+    touchEnd: (swiper) => {
+      swiper.slideTo(swiper.activeIndex + 1);
+    }
+  }
+});
