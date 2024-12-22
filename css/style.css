@@ -131,3 +131,26 @@ section {
 .about-icon {
     width: 20%;
 }
+
+
+/* Swiperの設定 */
+.swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+#slide1,
+#slide3 {
+    width: 100vw;
+    height: auto;
+}
+
+#slide2 {
+    width: 100vw;
+    height: auto;
+}
+
+#slide1 img{
+margin: 0 15px;
+}
+
+/* ★写真の間隔を空ける */
