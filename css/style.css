@@ -143,7 +143,7 @@ section {
     transition-timing-function: linear;
 }
 
-/* 写真の表示設定 */
+/* 写真の表示設定(仮) */
 #slide1,
 #slide3 {
     width: 90vw;
