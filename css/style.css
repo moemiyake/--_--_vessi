@@ -133,19 +133,25 @@ section {
 }
 
 
+
+
+/* ALL DAY STYLE */
+
 /* Swiperの設定 */
-.swiper-wrapper {
+/* ★１枚表示されるごとに一時停止してしまう */
+.swiper {
     transition-timing-function: linear;
 }
 
+/* 写真の表示設定 */
 #slide1,
 #slide3 {
-    width: 100vw;
+    width: 90vw;
     height: auto;
 }
 
 #slide2 {
-    width: 100vw;
+    width: 90vw;
     height: auto;
 }
 
