@@ -21,83 +21,19 @@ off.addEventListener("click", () => {
 
 
 
-// === Swiper ===
-// ★写真を一定の速度で走らせ続けたい
+// === ハンバーガーメニュー ===
 
-// slide1
-// ・自動再生させる
-const slide1 = new Swiper('#slide1', {
-    loop: true,
-    speed: 5000,
-    autoplay:  {
-        delay: 0,
-    },
-    
+// メニューボタンをクリックすると、メニューが開く
+$(document).ready(function() {
+    $('.header-navbtn').on('click', () => {
+        $('body').toggleClass('is-nav-open');
+    });
 });
 
-// ・ドラックしたときの調整
-const slide1y = new Swiper('#slide1', {
-  freeMode: {
-    enabled: true,
-    momentum: false,
-  },
-  
-  on: {
-    touchEnd: (swiper) => {
-      swiper.slideTo(swiper.activeIndex + 1);
-    }
-  }
+// リンクをクリックすると、メニューが閉じる
+$(document).ready(function() {
+    $('.sp-header-nav').on('click', 'a', () => {
+        $('body').toggleClass('is-nav-open');
+    });
 });
 
-
-// slide2
-// ・自動再生させる(逆再生)
-const slide2 = new Swiper('#slide2', {
-    loop: true,
-    speed: 5000,
-    autoplay:  {
-        delay: 0,
-        reverseDirection: true,
-    },
-    
-});
-
-// ・ドラックしたときの調整
-const slide2y = new Swiper('#slide2', {
-  freeMode: {
-    enabled: true,
-    momentum: false,
-  },
-  
-  on: {
-    touchEnd: (swiper) => {
-      swiper.slideTo(swiper.activeIndex + 1);
-    }
-  }
-});
-
-
-// slide3
-const slide3 = new Swiper('#slide3', {
-    reverseDirection: true, 
-    loop: true,
-    speed: 5000,
-    autoplay:  {
-        delay: 0,
-    },
-    
-});
-
-// ・ドラックしたときの調整
-const slide3y = new Swiper('#slide3', {
-  freeMode: {
-    enabled: true,
-    momentum: false,
-  },
-  
-  on: {
-    touchEnd: (swiper) => {
-      swiper.slideTo(swiper.activeIndex + 1);
-    }
-  }
-});

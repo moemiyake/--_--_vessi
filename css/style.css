@@ -7,9 +7,9 @@
 body {
     font-size: 16px;
     line-height: 1.5;
-    font-family: 'Noto Sans JP', sans-serif, 'Noto Serif JP', serif,C;
+    font-family: 'Noto Sans JP', sans-serif, 'Noto Serif JP', serif, 'Noto Music', 'Noto Sans', sans-serif;
     font-weight: 400;
-    color: #6c6c6c;
+    color: #3c3c3c;
     background-color: #F8F8F8;
 }
 
@@ -66,6 +66,10 @@ h5 {
 
 #mv,footer {
     background: #e4f4f8;
+}
+
+#style {
+    background-color: #F2ECE4;
 }
 
 footer {
@@ -135,28 +139,295 @@ section {
 
 
 
+/* ナビゲーションメニュー */
+
+/* - モバイル 表示に関する設定 - */
+.sp-only {
+    display: block;
+}
+
+.pc-only {
+    display: none;
+}
+
+/* - PC 表示に関する設定 - */
+@media screen and (min-width: 768px){
+    .sp-only {
+        display: none;
+    }
+
+    .pc-only {
+        display: block;
+    }
+}
+
+ /* - 共通設定 - */
+.gnav-item {
+    text-transform: uppercase;
+}
+
+/* ハンバーガーメニュー */
+
+/* - モバイル用CSS - */
+    /* メニューボタン(OPEN) */
+.header-navbtn {
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    z-index: 20;
+    /* background-color: rgba(89, 193, 188, 0.18); */
+}
+
+.header-navbtn span {
+    position: relative;
+    display: block;
+    height: 2.6px;
+    background-color: transparent; /* 透明 */
+    margin: 0 auto;
+    width: 20px;
+}
+
+.header-navbtn span::before,
+.header-navbtn span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2.6px;
+    border-radius: 30px;
+    background-color: #fff;
+    transition: transform .5s;
+}
+
+.header-navbtn span::before {
+    top: -3px;
+}
+
+.header-navbtn span::after {
+    bottom: -3px;
+}
+
+    /* メニュー画面(OPEN) */
+@media screen and (max-width: 767px){
+    .sp-header-nav {
+        position: fixed;
+        z-index: 10;
+        width: 98%;
+        height: 98%;
+        left: 1%;
+        top: 1%;
+        background-color: rgba(89, 193, 188, 0.18);
+        box-shadow: 3px 3px 22px rgba(0, 88, 100, 0.31);
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        transform: translateX(120%);
+        transition: transform .7s;
+    }
+
+    body.is-nav-open .sp-header-nav {
+        transform: translateX(0);
+    }
+}
+
+.sp-header-nav ul {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp-header-nav a {
+    display: inline-block;
+    padding: 15px;
+    margin: 5px;
+    color: #fff;
+    font-size: 21px;
+    letter-spacing: 3px;
+    font-family: "Noto Music", 'Noto Sans', sans-serif;
+}
+
+    /* メニューボタン(CLOSE) */
+body.is-nav-open .header-navbtn span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+body.is-nav-open .header-navbtn span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+
+
+/* サウンド  ON / OFF */
+.sound-area {
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(174, 196, 199, 0.33);
+    backdrop-filter: blur(20px);
+    text-transform: uppercase;
+    font-family: 'Noto Music', 'Noto Sans', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound-area p {
+    font-size: 7.5vw;  /* 24px */
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.sound-button {
+    font-family: 'Noto Music', 'Noto Sans', sans-serif;
+    border: none;
+    color: #fff;
+    background: transparent;
+    padding: 1em;
+    font-size: 4vw;  /* 15px */
+    letter-spacing: 1.6px;
+}
+
+.sound-button img {
+    width: 62%;
+}
+
+.sound-button-area {
+    display: flex;
+    justify-content: space-between;
+    width: 67%;
+}
+
+#on img {
+    margin-left: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LINE UP */
+.product a {
+    text-decoration: none;
+    color: #3c3c3c;
+}
+
+
+
+
 /* ALL DAY STYLE */
 
-/* Swiperの設定 */
-/* ★１枚表示されるごとに一時停止してしまう */
-.swiper {
-    transition-timing-function: linear;
+/* - ループエリアの設定 (表示幅・はみ出る部分の処理) -  */
+.style__loop_area {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
 }
 
-/* 写真の表示設定(仮) */
-#slide1,
-#slide3 {
-    width: 90vw;
-    height: auto;
+
+/* - ループエリアの設定 (ホバーすると、アニメーションが止まる) -  */
+.style__loop_area:hover .loop_left,
+.style__loop_area:hover .loop_right {
+    animation-play-state: paused;
 }
 
-#slide2 {
-    width: 90vw;
-    height: auto;
+
+
+
+/* - ループアニメーション　２段目 - */
+@keyframes loop_animation_right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .loop_right {
+    display: flex;
+    animation: loop_animation_right 10s linear infinite;
+  }
+
+
+/* - ループアニメーション　1,３段目 - */
+@keyframes loop_animation_left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform:translateX(-100%);
+    }
 }
 
-#slide1 img{
-margin: 0 15px;
+.loop_left {
+    display: flex;
+    animation: loop_animation_left 15s linear infinite;
 }
 
-/* ★写真の間隔を空ける */
+
+
+
+/* - 写真の表示設定 - */
+
+    /* 1,3段目 */
+.loop_l_box {
+    margin-left: 16px;
+}
+
+.loop_l_box img {
+    min-width: 250px;
+}
+
+    /* 2段目 */
+.loop_r_box {
+    margin-right: 16px;
+}
+
+.loop_r_box img {
+    min-width: 200px;
+}
+
+    /* 上下の間隔 */
+.style__loop_area {
+    margin:32px 0;
+    transition: 1s all;
+}
+
+    /* 影をつける */
+.style__loop_area img {
+    box-shadow: -1px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 1s all;
+}
+
+    /* ホバーすると、写真を少し大きくする */
+.style__loop_area img:hover {
+    transform: scale(1.03);
+    box-shadow: -5px 8px 8px rgba(0, 0, 0, 0.2);
+    }
+    .style__loop_area:hover {
+    overflow: visible;
+    }
+

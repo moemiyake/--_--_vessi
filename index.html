@@ -7,13 +7,13 @@
     <title>Vessi</title>
 
     <!-- FONT -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    <link <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Music&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -23,16 +23,54 @@
 
     <header>
         <!-- ⭐︎ヘッダー⭐︎ -->
+
         <!-- ⭐︎グローバルナビ？⭐︎ -->
+
+        <!-- モバイルのみ表示 -->
+        <button class="sp-only header-navbtn" type="btn">
+            <span></span>
+        </button>
+
+        <nav class="sp-only sp-header-nav">
+            <ul class="gnav-list">
+                <li class="gnav-item"><a href="#mv">Top</a></li>
+                <li class="gnav-item"><a href="#lineup">Line up</a></li>
+                <li class="gnav-item"><a href="#about">What's vessi?</a></li>
+                <li class="gnav-item"><a href="#tecnology">Tecnology</a></li>
+                <li class="gnav-item"><a href="#style">Style</a></li>
+                <li class="gnav-item"><a href="#question">Q&A</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- PCのみ表示 -->
+        <nav class="pc-only pc-header-nav">
+            <ul class="gnav-list">
+                <li class="gnav-item"><a href="#mv">Top</a></li>
+                <li class="gnav-item"><a href="#lineup">Line up</a></li>
+                <li class="gnav-item"><a href="#about">What's vessi?</a></li>
+                <li class="gnav-item"><a href="#tecnology">Tecnology</a></li>
+                <li class="gnav-item"><a href="#style">Style</a></li>
+                <li class="gnav-item"><a href="#question">Q&A</a></li>
+            </ul>
+        </nav>
+
     </header>
 
     <main>
-        <section id="bgm">
+        <section class="sound-area" id="sound">
             <!-- BGM再生 ON/OFF -->
-            <p>このサイトは音が流れます <br>
-                ON/OFF お選びください</p>
-            <button class="button-sound" id="on">ON</button>
-            <button class="button-sound" id="off">OFF</button>
+            <p>Sound</p>
+            <div class="sound-button-area">
+                <button class="sound-button" id="on">
+                    <img src="img/icon/８分音符_アイコン.png" alt="On">
+                    <br>ON
+                </button>
+                <button class="sound-button" id="off">
+                    <img src="img/icon/4分休符_アイコン.png" alt="Off">
+                    <br>OFF
+                </button>
+            </div>
         </section>
 
         <!-- トグルも付ける？ -->
@@ -73,21 +111,53 @@
                 </div>
 
                 <div class="product">
-                    <p></p>
-                        <img src="img/product/Cityscape - Storm Black - Side View.png" alt="Cityscape Sneaker">
+                    <a href="#">
+                        <div class="product-text">
+                            <p class="product-text-name">Cityscape Sneaker</p>
+                            <p class="product-text-category">アスレチックスタイル</p>
+                        </div>
+                        <div class="product-img">
+                            <img src="img/product/Cityscape - Storm Black - Side View.png" alt="Cityscape Sneaker">
+                        </div>
+                    </a>
                 </div>
+
                 <div class="product">
-                    <p></p>
-                        <img src="img/product/Weekend - Marble White - Side View.png" alt="Weekend Sneakers">
+                    <a href="#">
+                        <div>
+                            <p class="product-text-name">Weekend Sneakers</p>
+                            <p class="product-text-category">カジュアルスタイル</p>
+                        </div>
+                        <div>
+                            <img src="img/product/Weekend - Marble White - Side View.png" alt="Weekend Sneakers">
+                        </div>
+                    </a>
                 </div>
+
                 <div class="product">
-                    <p></p>
-                        <img src="img/product/Stormburst - DuineBeige - Side View.png" alt="Stormburst">
+                    <a href="#">
+                        <div>
+                            <p class="product-text-name">Stormburst</p>
+                            <p class="product-text-category">オールテレーンスタイル</p>
+                        </div>
+                        <div>
+                            <img src="img/product/Stormburst - DuineBeige - Side View.png" alt="Stormburst">
+                        </div>
+                    </a>
                 </div>
+
                 <h2>Kid's</h2>
                 <div class="product">
-                    <p></p>
-                        <img src="img/product/Weekend Kids - Nimbus Steel Grey - Side View.png" alt="Kid's Weekend Sneaker">
+                    <a href="#">
+                        <div>
+                            <p class="product-text-name">Weekend Sneaker</p>
+                            <p class="product-text-category">カジュアルスタイル</p>
+                        </div>
+                        <div>
+                            <img src="img/product/Weekend Kids - Nimbus Steel Grey - Side View.png"
+                                alt="Kid's Weekend Sneaker">
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="btnbox"><a href="#" class="btn">VIEW MORE!</a></div>
@@ -170,7 +240,7 @@
 
         </section>
 
-        <section id="style">
+        <section id="style" class="style-area">
             <!-- ⭐︎ALL DAY STYLE⭐︎ -->
             <div class="h2box">
                 <h2>
@@ -180,47 +250,59 @@
             </div>
 
             <!-- Swiper -->
-            <!-- ALL DAY STYLEスライド写真一覧 / ここから -->
+            <!-- ALL DAY STYLE　スライドループ写真 / ここから -->
 
-            
+
             <div class="style__main">
                 <!-- 1段目 -->
-                <div class="style__slide1">
-                    <div class="swiper" id="slide1">
-                        <div class="swiper-wrapper">
-                             <div class="swiper-slide"><img src="img/style/mobile/vessi_style_1-1.png" alt=""></div>
-                             <div class="swiper-slide"><img src="img/style/mobile/vessi_style_1-2.png" alt=""></div>
-                             <div class="swiper-slide"><img src="img/style/mobile/vessi_style_1-3.png" alt=""></div>
-                             <div class="swiper-slide"><img src="img/style/mobile/vessi_style_1-4.png" alt=""></div>
-                        </div>
+                <div class="style__loop_area">
+                    <div class="loop_left" id="loop1">
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_1-1.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_1-2.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_1-3.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_1-4.png" alt=""></div>
+                    </div>
+                    <div class="loop_left" id="loop1">
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_1-1.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_1-2.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_1-3.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_1-4.png" alt=""></div>
                     </div>
                 </div>
                 <!-- ２段目 -->
-                <div class="style__slide2">
-                    <div class="swiper" id="slide2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="img/style/mobile/vessi_style_2-1.png" alt=""></div>
-                            <div class="swiper-slide"><img src="img/style/mobile/vessi_style_2-2.png" alt=""></div>
-                            <div class="swiper-slide"><img src="img/style/mobile/vessi_style_2-3.png" alt=""></div>
-                            <div class="swiper-slide"><img src="img/style/mobile/vessi_style_2-4.png" alt=""></div>
-                            <div class="swiper-slide"><img src="img/style/mobile/vessi_style_2-5.png" alt=""></div>
-                        </div>
+                <div class="style__loop_area">
+                    <div class="loop_right" id="loop2">
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-1.png" alt=""></div>
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-2.png" alt=""></div>
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-3.png" alt=""></div>
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-4.png" alt=""></div>
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-5.png" alt=""></div>
+                    </div>
+                    <div class="loop_right" id="loop2">
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-1.png" alt=""></div>
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-2.png" alt=""></div>
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-3.png" alt=""></div>
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-4.png" alt=""></div>
+                        <div class="loop_r_box"><img src="img/style/mobile/vessi_style_2-5.png" alt=""></div>
                     </div>
                 </div>
                 <!-- ３段目 -->
-                <div class="style__slide3">
-                    <div class="swiper" id="slide3">
-                        <div class="swiper-wrapper">
-                             <div class="swiper-slide"><img src="img/style/mobile/vessi_style_3-1.png" alt=""></div>
-                             <div class="swiper-slide"><img src="img/style/mobile/vessi_style_3-2.png" alt=""></div>
-                             <div class="swiper-slide"><img src="img/style/mobile/vessi_style_3-3.png" alt=""></div>
-                        </div>
+                <div class="style__loop_area">
+                    <div class="loop_left" id="loop3">
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_3-1.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_3-2.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_3-3.png" alt=""></div>
+                    </div>
+                    <div class="loop_left" id="loop3">
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_3-1.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_3-2.png" alt=""></div>
+                        <div class="loop_l_box"><img src="img/style/mobile/vessi_style_3-3.png" alt=""></div>
                     </div>
                 </div>
             </div>
-            <!-- ALL DAY STYLEスライド写真一覧 / ここまで -->
+            <!-- ALL DAY STYLE　スライドループ写真 / ここまで -->
 
-            
+
             <div class="btnbox"><a href="#" class="btn">VIEW MORE!</a></div>
         </section>
 
@@ -311,7 +393,8 @@
 
 
 </body>
-<script src="js/swiper-bundle.min.js"></script>
+<!-- <script src="js/swiper-bundle.min.js"></script> -->
+<script src="js/jquery-3.7.1.js"></script>
 <script src="js/script.js"></script>
 
 </html>
