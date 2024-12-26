@@ -276,7 +276,7 @@ body.is-nav-open .header-navbtn span::after {
     background-color: rgba(174, 196, 199, 0.33);
     backdrop-filter: blur(20px);
     text-transform: uppercase;
-    font-family: 'Noto Music', 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 
     display: flex;
     flex-direction: column;
@@ -286,13 +286,17 @@ body.is-nav-open .header-navbtn span::after {
 
 .sound-area p {
     font-size: 7.5vw;  /* 24px */
+    font-weight: 300;
     letter-spacing: 2px;
     color: #fff;
     margin-bottom: 25px;
+    font-weight: 300;
+
 }
 
 .sound-button {
-    font-family: 'Noto Music', 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
     border: none;
     color: #fff;
     background: transparent;
@@ -303,6 +307,7 @@ body.is-nav-open .header-navbtn span::after {
 
 .sound-button img {
     width: 62%;
+    padding: 0 0 5% 0;
 }
 
 .sound-button-area {
@@ -315,6 +320,9 @@ body.is-nav-open .header-navbtn span::after {
     margin-left: 10%;
 }
 
+main .sound-setup {
+    display: none;
+}
 
 
 

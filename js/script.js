@@ -37,3 +37,10 @@ $(document).ready(function() {
     });
 });
 
+
+$(document).ready(function() {
+    $('.sound-button').on('click', () => {
+        $('#sound').toggleClass('sound-setup');
+    });
+});
+
