@@ -132,7 +132,7 @@ section {
     width: 90vw;
 }
 
-.about-icon {
+.card-icon {
     width: 20%;
 }
 
@@ -266,6 +266,8 @@ body.is-nav-open .header-navbtn span::after {
 
 
 /* サウンド  ON / OFF */
+
+
 .sound-area {
     position: fixed;
     z-index: 30;
@@ -282,6 +284,9 @@ body.is-nav-open .header-navbtn span::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    /* transition: all 1s; */
+
 }
 
 .sound-area p {
@@ -320,9 +325,7 @@ body.is-nav-open .header-navbtn span::after {
     margin-left: 10%;
 }
 
-main .sound-setup {
-    display: none;
-}
+
 
 
 

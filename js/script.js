@@ -20,6 +20,15 @@ off.addEventListener("click", () => {
 });
 
 
+// "SOUND"ボタンを押すと、#soundをフェードアウトする
+$(document).ready(function() {
+    $('.sound-button').on('click', () => {
+        $('#sound').fadeOut(1000);
+    });
+});
+
+
+
 
 // === ハンバーガーメニュー ===
 
@@ -38,9 +47,6 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
-    $('.sound-button').on('click', () => {
-        $('#sound').toggleClass('sound-setup');
-    });
-});
+
+
 

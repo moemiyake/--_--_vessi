@@ -76,7 +76,7 @@
         <!-- トグルも付ける？ -->
 
 
-        <section id="mv">
+        <section id="mv" class="mv">
             <!-- ⭐︎メインビジュアル⭐︎ -->
             <!-- ★写真、あとで明るく直す -->
             <div class="mv-text">
@@ -100,18 +100,19 @@
             <img src="img/傘.png" alt="傘">
         </section>
 
-        <section id="lineup" class="lineup-area">
+        <section id="lineup" class="lineup">
             <!-- ⭐︎ラインナップ⭐︎ -->
-            <div class="lineup-content">
-                <div class="h2box">
-                    <h2>
-                        LINE UP<br>
-                        <span>ラインナップ</span>
-                    </h2>
-                </div>
+            <div class="h2box">
+                <h2>
+                    LINE UP<br>
+                    <span>ラインナップ</span>
+                </h2>
+            </div>
+            
+            <div class="lineup_body">
 
                 <div class="product">
-                    <a href="#">
+                    <a href="#" class="product-inner">
                         <div class="product-text">
                             <p class="product-text-name">Cityscape Sneaker</p>
                             <p class="product-text-category">アスレチックスタイル</p>
@@ -123,7 +124,7 @@
                 </div>
 
                 <div class="product">
-                    <a href="#">
+                    <a href="#" class="product-inner">
                         <div>
                             <p class="product-text-name">Weekend Sneakers</p>
                             <p class="product-text-category">カジュアルスタイル</p>
@@ -135,7 +136,7 @@
                 </div>
 
                 <div class="product">
-                    <a href="#">
+                    <a href="#" class="product-inner">
                         <div>
                             <p class="product-text-name">Stormburst</p>
                             <p class="product-text-category">オールテレーンスタイル</p>
@@ -148,7 +149,7 @@
 
                 <h2>Kid's</h2>
                 <div class="product">
-                    <a href="#">
+                    <a href="#" class="product-inner">
                         <div>
                             <p class="product-text-name">Weekend Sneaker</p>
                             <p class="product-text-category">カジュアルスタイル</p>
@@ -159,12 +160,13 @@
                         </div>
                     </a>
                 </div>
+
             </div>
             <div class="btnbox"><a href="#" class="btn">VIEW MORE!</a></div>
 
         </section>
 
-        <section id="about">
+        <section id="about" class="about">
             <!-- ⭐︎Vessiとは？⭐︎ -->
             <div class="h2box">
                 <h2>
@@ -173,44 +175,62 @@
                 </h2>
             </div>
 
-            <img class="about-icon" src="img/100_water_proof.svg" alt="傘のアイコン">
-            <h3>100%防水</h3>
-            <p>
-                当社の Dyma-tex® テクノロジーにより、<br>
-                水の浸入を防ぎ通気性を保ちます。<br>
-                雪もぬかるみも泥もへっちゃらです。
-            </p>
+            <div class="about_body">
 
+                <div class="card">
+                    <div class="card-inner">
+                        <img class="card-icon" src="img/100_water_proof.svg" alt="傘のアイコン">
+                        <h3>100%防水</h3>
+                        <p>
+                            当社の Dyma-tex® テクノロジーにより、<br>
+                            水の浸入を防ぎ通気性を保ちます。<br>
+                            雪もぬかるみも泥もへっちゃらです。
+                        </p>
+                    </div>
+                </div>
 
-            <img class="about-icon" src="img/cloud_like_comfort.svg" alt="雲のアイコン">
-            <h3>雲みたいな履き心地</h3>
-            <p>
-                防水性だけではありません。<br>
-                雲の上を歩くような心地よさも魅力。<br>
-                靴を脱ぎたくなくなるかも。
-            </p>
+                <div class="card">
+                    <div class="card-inner">
+                        <img class="card-icon" src="img/cloud_like_comfort.svg" alt="雲のアイコン">
+                        <h3>雲みたいな履き心地</h3>
+                        <p>
+                            防水性だけではありません。<br>
+                            雲の上を歩くような心地よさも魅力。<br>
+                            靴を脱ぎたくなくなるかも。
+                        </p>
+                    </div>
+                </div>
 
-            <img class="about-icon" src="img/lightweight.svg" alt="羽のアイコン">
-            <h3>軽量</h3>
-            <p>
-                不格好なレインブーツに別れを告げましょう。<br>
-                Vessi は非常に軽量なので、履いていることを<br>
-                忘れてしまうほどです。
-            </p>
+                <div class="card">
+                    <div class="card-inner">
+                        <img class="card-icon" src="img/lightweight.svg" alt="羽のアイコン">
+                        <h3>軽量</h3>
+                        <p>
+                            不格好なレインブーツに別れを告げましょう。<br>
+                            Vessi は非常に軽量なので、履いていることを<br>
+                            忘れてしまうほどです。
+                        </p>
+                    </div>
+                </div>
 
-            <img class="about-icon" src="img/vegan_material.svg" alt="新芽のアイコン">
-            <h3>ビーガン素材</h3>
-            <p>
-                私たちが作るものは、動物性製品を一切<br>
-                使用していないことをお約束します。
-            </p>
+                <div class="card">
+                    <div class="card-inner">
+                        <img class="card-icon" src="img/vegan_material.svg" alt="新芽のアイコン">
+                        <h3>ビーガン素材</h3>
+                        <p>
+                            私たちが作るものは、動物性製品を一切<br>
+                            使用していないことをお約束します。
+                        </p>
+                    </div>
+                </div>
 
-            <video src="video/AboutVessi.mp4" loop autoplay muted></video>
+                <video src="video/AboutVessi.mp4" loop autoplay muted></video>
+            </div>
 
 
         </section>
 
-        <section id="tecnology">
+        <section id="tecnology" class="tecnology">
             <!-- ⭐︎テクノロジー⭐︎ -->
             <div class="h2box">
                 <h2>
@@ -219,28 +239,30 @@
                 </h2>
             </div>
 
-            <dl>
-                <div>
-                    <img src="img/vessiのテクノロジー1.webp" alt="マジックレイヤー">
-                    <dt>マジックレイヤー</dt>
-                    <dd>Dyma-tex としても知られる当社の特許取得済みの 100% 防水で通気性のあるニットは、夏は涼しく、冬は暖かく、一年中足元を快適に保ちます。</dd>
-                </div>
-                <div>
-                    <img src="img/vessiのテクノロジー2.webp" alt="クッション">
-                    <dt>クッション</dt>
-                    <dd>抗菌インソールは内部をフレッシュに、そしてクラウドサポートが快適な履き心地を保ちます。</dd>
-                </div>
-                <div>
-                    <img src="img/vessiのテクノロジー3.webp" alt="ソール">
-                    <dt>ソール</dt>
-                    <dd>超軽量で弾力性のあるヘリンボーングリップを備えたソールは、雨の日の地面の滑りにくさを保証します。</dd>
-                </div>
-            </dl>
+            <div class="tecnology_body">
+                <dl>
+                    <div>
+                        <img src="img/vessiのテクノロジー1.webp" alt="マジックレイヤー">
+                        <dt>マジックレイヤー</dt>
+                        <dd>Dyma-tex としても知られる当社の特許取得済みの 100% 防水で通気性のあるニットは、夏は涼しく、冬は暖かく、一年中足元を快適に保ちます。</dd>
+                    </div>
+                    <div>
+                        <img src="img/vessiのテクノロジー2.webp" alt="クッション">
+                        <dt>クッション</dt>
+                        <dd>抗菌インソールは内部をフレッシュに、そしてクラウドサポートが快適な履き心地を保ちます。</dd>
+                    </div>
+                    <div>
+                        <img src="img/vessiのテクノロジー3.webp" alt="ソール">
+                        <dt>ソール</dt>
+                        <dd>超軽量で弾力性のあるヘリンボーングリップを備えたソールは、雨の日の地面の滑りにくさを保証します。</dd>
+                    </div>
+                </dl>
+            </div>
 
 
         </section>
 
-        <section id="style" class="style-area">
+        <section id="style" class="style">
             <!-- ⭐︎ALL DAY STYLE⭐︎ -->
             <div class="h2box">
                 <h2>
@@ -253,7 +275,7 @@
             <!-- ALL DAY STYLE　スライドループ写真 / ここから -->
 
 
-            <div class="style__main">
+            <div class="style_body">
                 <!-- 1段目 -->
                 <div class="style__loop_area">
                     <div class="loop_left" id="loop1">
@@ -306,7 +328,7 @@
             <div class="btnbox"><a href="#" class="btn">VIEW MORE!</a></div>
         </section>
 
-        <section id="question">
+        <section id="question" class="question">
             <!-- ⭐︎Q&A⭐︎ -->
             <div class="h2box">
                 <h2>
@@ -315,47 +337,49 @@
                 </h2>
             </div>
 
-            <ul>
-                <li>
-                    <h4>本当に100%防水なんですか？</h4>
-                    <p>はい。でもコーティングではありません！
-                        私たちは、汗と熱を逃がす一体型の層を備えた特許取得済みのニット素材を開発しました。これにより、足の呼吸を妨げず、同時にあらゆる外的要素を遮断します。これで水たまりもへっちゃらです。
-                        どのように機能するのでしょうか?
-                        膜層には百万個の小さな穴があり、蒸気状の水（汗）と熱はその小さな穴を通過できますが、水分子は大きすぎて通過できません。またこれは防水加工が靴の寿命の間続くことを意味します...もちろん、素材に大きな穴を開けない限り！
-                    </p>
-                </li>
-                <li>
-                    <h4>環境に優しいですか？</h4>
-                    <p>靴産業は、大量のエネルギー、水、材料を消費するという罪を犯しています。しかし、Vessi では、私たちの価値観を反映し、環境への影響を最小限に抑える、思いやりのある製造慣行を開発しました。
-                        そのため、当社の製品はすべて完全にビーガンであり、水と材料の廃棄物を削減する方法で作られています。
-                        当社の特許取得済みの防水技術である Dyma-tex®
-                        は、有害な化学物質や一時的なコーティングを使用せずに作られています。その結果、PFA*フリーで耐久性の高い防水製品が誕生しました。これは、足での使用時間を増やし、埋め立て地に行く機会を削減することを意味します。
-                        私たちは二酸化炭素排出量を削減し、靴業界を浄化するための新しい方法に熱心に取り組んでいます。続報をお楽しみに！
-                        *フッ素樹脂の一種（パーフルオロアルコキシアルカン）</p>
-                </li>
-                <li>
-                    <h4>旅行に適していますか?</h4>
-                    <p>間違いありません！ — Vessi は、世界中を旅する冒険に最適なトラベル シューズです。
-                        非常に軽量で快適な履き心地で、スタイリングも簡単です。100% 耐候性なので、雨、雪、泥、ぬかるみ、バーの飲み物、ビーチの砂などを心配する必要はありません。
-                        私たちは、あなたとVessiシューズがどのように過ごしているかを知りたいと思っています。私たちのページであなたをフィーチャーできるように、ソーシャルサイトにて @vessi
-                        でぜひお知らせください。</p>
-                </li>
-                <li>
-                    <h4>Vessiはビーガンですか？</h4>
-                    <p>Vessi は 100% ビーガンで、生き物は含まれていません 🌱
-                        接着剤には水性接着剤を使用し、レザーとスエードはエンジニアリングの結晶です（つまり人工）。見える場所にも見えない場所にも動物性製品は一切含まれていません。</p>
-                </li>
-                <li>
-                    <h4>保証ポリシーは何ですか?</h4>
-                    <p>365 日保証。
-                        私たちはあなたとVessiが永遠に一緒にいることを望んでいます。だからこそ、私たちは品質と約束を守ります。すべての Vessi には、メーカーの欠陥に対して 1 年間の保証が付いています。
-                        Vessi を改造したり、強力な化学薬品にさらしたりすることによって発生した問題、または過度の磨耗によって欠陥が発生した場合には、弊社は補償できないことには注意してください。
-                        そうは言っても、あなたのVessiの様子がおかしいと思われる場合は、遠慮せずに連絡してお知らせください。喜んでご連絡させていただき、お客様のために何ができるかを確認させていただきます。
-                        保証請求を開始するには、まずこのフォームに記入してください。
-                        記入済みのフォームが当社に到着してから処理されるまで、最大 14 日ほどお待ちください。
-                        ※Vessi は、保証ポリシーの要件を満たさないクレームを拒否する権利を留保します。</p>
-                </li>
-            </ul>
+            <div class="question_body">
+                <ul>
+                    <li>
+                        <h4>本当に100%防水なんですか？</h4>
+                        <p>はい。でもコーティングではありません！
+                            私たちは、汗と熱を逃がす一体型の層を備えた特許取得済みのニット素材を開発しました。これにより、足の呼吸を妨げず、同時にあらゆる外的要素を遮断します。これで水たまりもへっちゃらです。
+                            どのように機能するのでしょうか?
+                            膜層には百万個の小さな穴があり、蒸気状の水（汗）と熱はその小さな穴を通過できますが、水分子は大きすぎて通過できません。またこれは防水加工が靴の寿命の間続くことを意味します...もちろん、素材に大きな穴を開けない限り！
+                        </p>
+                    </li>
+                    <li>
+                        <h4>環境に優しいですか？</h4>
+                        <p>靴産業は、大量のエネルギー、水、材料を消費するという罪を犯しています。しかし、Vessi では、私たちの価値観を反映し、環境への影響を最小限に抑える、思いやりのある製造慣行を開発しました。
+                            そのため、当社の製品はすべて完全にビーガンであり、水と材料の廃棄物を削減する方法で作られています。
+                            当社の特許取得済みの防水技術である Dyma-tex®
+                            は、有害な化学物質や一時的なコーティングを使用せずに作られています。その結果、PFA*フリーで耐久性の高い防水製品が誕生しました。これは、足での使用時間を増やし、埋め立て地に行く機会を削減することを意味します。
+                            私たちは二酸化炭素排出量を削減し、靴業界を浄化するための新しい方法に熱心に取り組んでいます。続報をお楽しみに！
+                            *フッ素樹脂の一種（パーフルオロアルコキシアルカン）</p>
+                    </li>
+                    <li>
+                        <h4>旅行に適していますか?</h4>
+                        <p>間違いありません！ — Vessi は、世界中を旅する冒険に最適なトラベル シューズです。
+                            非常に軽量で快適な履き心地で、スタイリングも簡単です。100% 耐候性なので、雨、雪、泥、ぬかるみ、バーの飲み物、ビーチの砂などを心配する必要はありません。
+                            私たちは、あなたとVessiシューズがどのように過ごしているかを知りたいと思っています。私たちのページであなたをフィーチャーできるように、ソーシャルサイトにて @vessi
+                            でぜひお知らせください。</p>
+                    </li>
+                    <li>
+                        <h4>Vessiはビーガンですか？</h4>
+                        <p>Vessi は 100% ビーガンで、生き物は含まれていません 🌱
+                            接着剤には水性接着剤を使用し、レザーとスエードはエンジニアリングの結晶です（つまり人工）。見える場所にも見えない場所にも動物性製品は一切含まれていません。</p>
+                    </li>
+                    <li>
+                        <h4>保証ポリシーは何ですか?</h4>
+                        <p>365 日保証。
+                            私たちはあなたとVessiが永遠に一緒にいることを望んでいます。だからこそ、私たちは品質と約束を守ります。すべての Vessi には、メーカーの欠陥に対して 1 年間の保証が付いています。
+                            Vessi を改造したり、強力な化学薬品にさらしたりすることによって発生した問題、または過度の磨耗によって欠陥が発生した場合には、弊社は補償できないことには注意してください。
+                            そうは言っても、あなたのVessiの様子がおかしいと思われる場合は、遠慮せずに連絡してお知らせください。喜んでご連絡させていただき、お客様のために何ができるかを確認させていただきます。
+                            保証請求を開始するには、まずこのフォームに記入してください。
+                            記入済みのフォームが当社に到着してから処理されるまで、最大 14 日ほどお待ちください。
+                            ※Vessi は、保証ポリシーの要件を満たさないクレームを拒否する権利を留保します。</p>
+                    </li>
+                </ul>
+            </div>
 
 
         </section>
