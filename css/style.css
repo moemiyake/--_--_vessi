@@ -339,7 +339,7 @@ body.is-nav-open .header-navbtn span::after {
 
 
 
-/* LINE UP */
+/* === LINE UP === */
 .product a {
     text-decoration: none;
     color: #3c3c3c;
@@ -348,7 +348,7 @@ body.is-nav-open .header-navbtn span::after {
 
 
 
-/* ALL DAY STYLE */
+/* === ALL DAY STYLE === */
 
 /* - ループエリアの設定 (表示幅・はみ出る部分の処理) -  */
 .style__loop_area {
@@ -441,4 +441,97 @@ body.is-nav-open .header-navbtn span::after {
     .style__loop_area:hover {
     overflow: visible;
     }
+
+
+
+/* === Q & A === */
+
+.question {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question_body {
+    padding-bottom: 60px;
+}
+
+.question_body ul {
+    list-style: none;
+}
+
+/* 各 Q&A 段の設定 */
+.q-content {
+    width: 230px;
+    height: auto;
+}
+
+h4.q-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #005864;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    padding: 14px;
+    border-bottom: solid 0.5px #005864;
+    cursor: pointer;
+}
+
+.q-answer {
+    color: #6C6C6C;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 15px 0 50px 0;
+
+    display: none;  /* トグルで表示・非表示を切り替える */
+}
+
+.q-answer.is-open {
+    display: block;
+}
+
+/* Q & A アコーディオン */
+    /* ＋ × ボタンの作成 */
+.q-question span {
+    position: relative;
+    width: 15px;
+    height: 15px;
+}
+
+
+.q-openclose::before,
+.q-openclose::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 30px;
+    background-color: #005864;
+    transition: .5s;
+}
+
+.q-openclose::before {
+    top: 6.5px;
+}
+
+.q-openclose.is-open::before {
+    rotate: 135deg;
+}
+
+.q-openclose::after {
+    bottom: 6.5px;
+    rotate: 90deg;
+}
+
+.q-openclose.is-open::after {
+    rotate: 225deg;
+}
+
+
 

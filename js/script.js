@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 // === ハンバーガーメニュー ===
 
-// メニューボタンをクリックすると、メニューが開く
+// メニューボタンをクリックすると、メニューが開閉する
 $(document).ready(function() {
     $('.header-navbtn').on('click', () => {
         $('body').toggleClass('is-nav-open');
@@ -48,5 +48,28 @@ $(document).ready(function() {
 
 
 
+// === Q & A === //
+
+// Qを押すと、Aが出てくる。
+$(document).ready(function() {
+    $('.q-question').on('click', e => {
+        $(e.target).next().slideToggle();
+    });
+});
+
+$(document).ready(function() {
+    $('.q-openclose').on('click', function() {
+        $(this).parent().next().slideToggle();
+    });
+});
 
 
+//  ＋ → × , dispray: none → block; 
+$(document).ready(function() {
+    $('.q-question').on('click', function() {
+        $(this).children().toggleClass('is-open');
+        $(this).next().toggleClass('is-open');
+    });
+});
+
+//★時間があったら、1つだけopen設定もやってみる。
