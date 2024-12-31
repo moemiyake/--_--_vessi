@@ -53,13 +53,13 @@ $(document).ready(function() {
 // Qを押すと、Aが出てくる。
 $(document).ready(function() {
     $('.q-question').on('click', e => {
-        $(e.target).next().slideToggle();
+        $(e.target).next().slideToggle(700);
     });
 });
 
 $(document).ready(function() {
     $('.q-openclose').on('click', function() {
-        $(this).parent().next().slideToggle();
+        $(this).parent().next().slideToggle(700);
     });
 });
 

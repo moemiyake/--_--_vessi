@@ -104,6 +104,11 @@ section {
     padding: 60px 0;
 }
 
+#mv {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /* ボタンの設定 */
 
 .btnbox {
@@ -121,16 +126,7 @@ section {
     border-radius: 30px;
 }
 
-.catch-copy {
-    font-family: "Noto Serif JP";
-    writing-mode: vertical-lr;
-    letter-spacing: 3px;
-    position: absolute;
-}
 
-.mv-bg {
-    width: 90vw;
-}
 
 .card-icon {
     width: 20%;
@@ -327,6 +323,115 @@ body.is-nav-open .header-navbtn span::after {
 
 
 
+/* メインコンテンツ */
+
+/* === TOP === */
+
+/* HERO */
+.mv_top-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-color: skyblue; */
+}
+
+
+.catch-copy {
+    color: #627471;
+    font-family: "Noto Serif JP";
+    font-size: 16px;
+    font-size: 3vw;
+    letter-spacing: 3px;
+    writing-mode: vertical-lr;
+    position: absolute;
+}
+
+.mv-product {
+    width: 90vw;
+    max-width: 800px;
+    padding-top: 6.5vh;
+
+}
+
+.mv-logo {
+    aspect-ratio: 5 / 1;
+    width: 90vw;
+    max-width: 800px;
+    /* background-color: #00B5CE; */
+    object-fit: cover;
+
+}
+
+.mv_second-container {
+    width: 100%;
+    height: 100vh;
+    position: flex;
+}
+
+
+/* SECOND */
+.mv_second-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120vh;
+    /* max-height: 790px; */
+    position: relative;
+    padding-top: 60px;
+}
+/* ★上下がうまく固定されない */
+
+.mv-raindrops {
+    position: absolute;
+    z-index: 5;
+    left:45%;
+    width: 40vw;
+}
+
+.mv-lead {
+    position: relative;
+    top: 38vh;
+    width: 70vw;
+    display: flex;
+}
+
+.lead-shape {
+    margin: 0 auto;
+}
+
+.lead-copy {
+    position: absolute;
+    font-size: 3.5vw;
+    letter-spacing: 0.5vw;
+    line-height: 6.5vw;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mv-umbrella {
+    top: 41vh;
+    position: relative;
+    left: 34%;
+    width: 50vw;
+}
+
+.mv_bg-water {
+    /* position: relative; */
+    display: block;
+    background: #F8F8F8;
+}
+/* ★上に線が... */
+
+
+
+
 
 
 
@@ -514,7 +619,7 @@ h4.q-question {
     height: 2px;
     border-radius: 30px;
     background-color: #005864;
-    transition: .5s;
+    transition: .6s .1s;
 }
 
 .q-openclose::before {
