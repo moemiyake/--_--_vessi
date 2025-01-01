@@ -343,11 +343,12 @@ body.is-nav-open .header-navbtn span::after {
 .catch-copy {
     color: #627471;
     font-family: "Noto Serif JP";
-    font-size: 16px;
-    font-size: 3vw;
+    /* font-size: 16px; */
+    font-size: 4.5vw;
     letter-spacing: 3px;
     writing-mode: vertical-lr;
     position: absolute;
+    top:10vh;
 }
 
 .mv-product {
@@ -378,8 +379,8 @@ body.is-nav-open .header-navbtn span::after {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 120vh;
-    /* max-height: 790px; */
+    height: 150vh;
+    max-height: 750px;
     position: relative;
     padding-top: 60px;
 }
@@ -388,13 +389,14 @@ body.is-nav-open .header-navbtn span::after {
 .mv-raindrops {
     position: absolute;
     z-index: 5;
+    top: 15%;
     left:45%;
     width: 40vw;
 }
 
 .mv-lead {
     position: relative;
-    top: 38vh;
+    top: 40vh;
     width: 70vw;
     display: flex;
 }
@@ -405,42 +407,33 @@ body.is-nav-open .header-navbtn span::after {
 
 .lead-copy {
     position: absolute;
-    font-size: 3.5vw;
-    letter-spacing: 0.5vw;
+    /* font-size: 14px; */
+    font-size: 4vw;
+    letter-spacing: 0.6vw;
     line-height: 6.5vw;
     font-family: 'Noto Serif JP', serif;
     font-weight: normal;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    white-space: nowrap;
 }
 
 .mv-umbrella {
-    top: 41vh;
+    display: block;
+    top: 43vh;
     position: relative;
     left: 34%;
-    width: 50vw;
+    width: 55vw;
 }
 
 .mv_bg-water {
-    /* position: relative; */
+    position: absolute;
+    transform: translate(-1px,-1px);
+    z-index: -1;
     display: block;
     background: #F8F8F8;
 }
-/* ★上に線が... */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -449,6 +442,63 @@ body.is-nav-open .header-navbtn span::after {
     text-decoration: none;
     color: #3c3c3c;
 }
+
+.lineup_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+}
+
+.product {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.product-text {
+    display: inline-block;
+    letter-spacing: 0.08em;
+    line-height: 1.5em;
+}
+
+.product-name {
+    font-style: 16px;
+}
+
+.product-category {
+    font-size: 12px;
+}
+
+.product-img {
+    width: 550px;
+    height: auto;
+}
+
+.flom-left {
+    transform: translateX(-15%);
+}
+
+.from-right {
+    transform: translateX(15%);
+}
+
+/* ↑画像サイズ変われば、%の数字も変わるかも */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
