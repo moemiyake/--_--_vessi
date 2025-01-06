@@ -73,3 +73,21 @@ $(document).ready(function() {
 });
 
 //★時間があったら、1つだけopen設定もやってみる。
+
+
+
+// === PRODUCTS ===
+
+// スニーカー　スライドインアニメ
+// ウィンドウ内に「product-inner」の上部が150px表示されたら、クラス属性「scrollin」を追加する。
+$(window).scroll(function (){
+	$('.product-inner').each(function(){
+		var elemPos = $(this).offset().top,
+		scroll = $(window).scrollTop(),
+		windowHeight = $(window).height();
+
+			if (scroll > elemPos - windowHeight + 150){
+				$(this).addClass('scrollin');
+			}
+	});
+});
