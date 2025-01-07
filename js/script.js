@@ -1,7 +1,7 @@
 // === BGM ===
 
 //オーディオを登録する
-const audio = new Audio("../music/01 Overture.mp3");
+const audio = new Audio("../music/Singin' In The Rain.mp3");
 
 
 //onボタンを連れてくる
