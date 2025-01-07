@@ -96,10 +96,10 @@ $(document).ready(function () {
 
 
 // === TECNOLOGY ===
-$(document).ready(function () {
-    $('.tecnology_body').scroll(function () {
-        $('tecnology-dt').fadeIn(400)
-    });
+// $(document).ready(function () {
+//     $('.tecnology_body').scroll(function () {
+//         $('tecnology-dt').fadeIn(400)
+//     });
 
 
-});
+// });
