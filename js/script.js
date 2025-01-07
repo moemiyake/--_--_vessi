@@ -21,7 +21,7 @@ off.addEventListener("click", () => {
 
 
 // "SOUND"ボタンを押すと、#soundをフェードアウトする
-$(document).ready(function() {
+$(document).ready(function () {
     $('.sound-button').on('click', () => {
         $('#sound').fadeOut(1000);
     });
@@ -33,14 +33,14 @@ $(document).ready(function() {
 // === ハンバーガーメニュー ===
 
 // メニューボタンをクリックすると、メニューが開閉する
-$(document).ready(function() {
+$(document).ready(function () {
     $('.header-navbtn').on('click', () => {
         $('body').toggleClass('is-nav-open');
     });
 });
 
 // リンクをクリックすると、メニューが閉じる
-$(document).ready(function() {
+$(document).ready(function () {
     $('.sp-header-nav').on('click', 'a', () => {
         $('body').toggleClass('is-nav-open');
     });
@@ -51,22 +51,22 @@ $(document).ready(function() {
 // === Q & A === //
 
 // Qを押すと、Aが出てくる。
-$(document).ready(function() {
+$(document).ready(function () {
     $('.q-question').on('click', e => {
         $(e.target).next().slideToggle(700);
     });
 });
 
-$(document).ready(function() {
-    $('.q-openclose').on('click', function() {
+$(document).ready(function () {
+    $('.q-openclose').on('click', function () {
         $(this).parent().next().slideToggle(700);
     });
 });
 
 
 //  ＋ → × , dispray: none → block; 
-$(document).ready(function() {
-    $('.q-question').on('click', function() {
+$(document).ready(function () {
+    $('.q-question').on('click', function () {
         $(this).children().toggleClass('is-open');
         $(this).next().toggleClass('is-open');
     });
@@ -79,15 +79,27 @@ $(document).ready(function() {
 // === PRODUCTS ===
 
 // スニーカー　スライドインアニメ
-// ウィンドウ内に「product-inner」の上部が150px表示されたら、クラス属性「scrollin」を追加する。
-$(window).scroll(function (){
-	$('.product-inner').each(function(){
-		var elemPos = $(this).offset().top,
-		scroll = $(window).scrollTop(),
-		windowHeight = $(window).height();
+    // ウィンドウ内に「product-inner」の上部が150px表示されたら、クラス属性「scrollin」を追加する。
+$(document).ready(function () {
+    $(window).scroll(function () {
+        $('.product-inner').each(function () {
+            var elemPos = $(this).offset().top,
+                scroll = $(window).scrollTop(),
+                windowHeight = $(window).height();
 
-			if (scroll > elemPos - windowHeight + 150){
-				$(this).addClass('scrollin');
-			}
-	});
+            if (scroll > elemPos - windowHeight + 150) {
+                $(this).addClass('scrollin');
+            }
+        });
+    });
+});
+
+
+// === TECNOLOGY ===
+$(document).ready(function () {
+    $('.tecnology_body').scroll(function () {
+        $('tecnology-dt').fadeIn(400)
+    });
+
+
 });
