@@ -48,6 +48,67 @@ $(document).ready(function () {
 
 
 
+// === PC メニュー === 
+
+// メニュー　スクロールに連動したメニューのアクティブ化
+$(document).ready(function () {
+    // メニューリンクをクリックすると、スムーズスクロールする。
+    $('.gnav-list li a').on('click', function (event) {
+
+        //#idをクリックした時、ページの閲覧履歴を残さないようにする
+        event.preventDefault();
+
+        // すべてのメニューアイテムから 'active' クラスを削除
+        $('.gnav-list li a').removeClass('active');
+
+        // クリックされたメニューアイテムに 'active' クラスを追加
+        $(this).addClass('active');
+
+        // 対象のセクションへスクロール
+        var target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 800, 'swing'
+        );
+    });
+
+// 1/9 ★ここから！
+    // スクロール時にメニューアイテムをハイライト
+    $(window).on('scroll', function () {
+        var scrollPosition = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var offset = 220;  // 画面下から少しスクロールしたときのオフセット
+
+        // 各セクションの位置をチェック
+        $('section').each(function () {
+            var sectionTop = $(this).offset().top;
+            var sectionBottom = sectionTop + $(this).outerHeight();
+
+            // スクロール位置とセクションの範囲を確認（オフセットを加える）
+            if (scrollPosition + windowHeight > sectionTop + offset && scrollPosition < sectionBottom) {
+                var id = $(this).attr('id');
+
+                // すべてのメニューアイテムから 'active' クラスを削除
+                $('.gnav-list a').removeClass('active');
+
+                // 対応するメニューアイテムに 'active' クラスを追加
+                $('.gnav-list a[href="#' + id + '"]').addClass('active');
+            }
+
+            // TOP画面に来たら、全てのメニューアイテムに 'active-top' クラスを追加
+            if (scrollPosition > 400) {
+                $('.gnav-list a').removeClass('active-top');
+            } else {
+                $('.gnav-list a').addClass('active-top');
+            }
+        });
+    });
+});
+
+
+
+
+
 // === Q & A === //
 
 // Qを押すと、Aが出てくる。

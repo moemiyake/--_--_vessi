@@ -108,6 +108,10 @@ section {
     padding: 60px 0;
 }
 
+.movie {
+    padding: 0;
+}
+
 #mv {
     padding-top: 0;
     padding-bottom: 0;
@@ -142,7 +146,6 @@ section {
 
 
 
-
 /* ナビゲーションメニュー */
 
 /* - モバイル 表示に関する設定 - */
@@ -163,12 +166,81 @@ section {
     .pc-only {
         display: block;
     }
+
+    /* - ナビメニューの設定 - */
+
+    .pc-header-nav {
+        display: flex;
+        height: 100vh;
+        align-items: end;
+        margin-left: 44px;
+        position: fixed;
+        z-index: 10;
+        padding-bottom: 15vh;
+    }
+
+    .pc-header-nav a {
+        display: inline-block;
+        padding: 6px;
+        margin: 1px;
+        color: #6C6C6C;
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 600;
+    }
+    
+    /* TOP画面上から400pxより　上にスクロールトップが来ると、　全ナビメニューが表示される */
+    .gnav-item a.active-top {
+        color: #6C6C6C;
+        transition: .7s;
+    }
+
+    /* TOP画面上から400pxより　下にスクロールトップが来ると、ナビメニューが透明になる */
+    .gnav-item a {
+        color: transparent;
+        transition: .7s;
+    }
+
+
+    /* ナビメニュー左　装飾の設定 */
+    .gnav-item a::before {
+        content: '';
+        display: inline-block;
+        width: 7px;
+        height: 1px;
+        background-color: #6C6C6C;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .gnav-item a.active::before,
+    .gnav-item a:hover::before {
+        content: '⚫';
+        color: #6C6C6C;
+        font-size: 10px;
+        vertical-align: top;
+        transform: translate(-2px, 5px);
+        background-color: transparent;
+    }
+
+    /* .gnav-listをホバーすると、ナビメニューが全て表示される */
+    .gnav-list:hover {
+        a {
+        color: #6C6C6C;
+        transition: .7s;
+        }
+    }
 }
+
+
 
  /* - 共通設定 - */
 .gnav-item {
     text-transform: uppercase;
 }
+
+
 
 /* ハンバーガーメニュー */
 
@@ -248,12 +320,13 @@ section {
 
 .sp-header-nav a {
     display: inline-block;
-    padding: 15px;
-    margin: 5px;
+    padding: 12px;
+    margin: 3px;
     color: #fff;
-    font-size: 21px;
+    font-size: 20px;
     letter-spacing: 3px;
-    font-family: "Noto Music", 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
 }
 
     /* メニューボタン(CLOSE) */
@@ -306,7 +379,6 @@ body.is-nav-open .header-navbtn span::before {
     color: #fff;
     margin-bottom: 25px;
     font-weight: 300;
-
 }
 
 .sound-button {
@@ -334,6 +406,37 @@ body.is-nav-open .header-navbtn span::before {
 #on img {
     margin-left: 10%;
 }
+
+
+@media screen and (min-width: 768px){
+    .sound-area p {
+        font-size: 5vw;  /* 60px */
+        font-weight: 400;
+        letter-spacing: 7px;
+        margin-bottom: 10px;
+    }
+    
+    .sound-button {
+        padding: 1em;
+        font-size: 2vw;  /* 20px */
+        letter-spacing: 1px;
+    }
+    
+    .sound-button img {
+        width: 45%;
+        padding: 0 0 3% 0;
+    }
+    
+    .sound-button-area {
+        width: 30%;
+    }
+    
+    #on img {
+        margin-left: 5%;
+    }
+}
+
+
 
 
 
@@ -575,6 +678,9 @@ body.is-nav-open .header-navbtn span::before {
 }
 
 
+
+
+
 /* サブスライド rainy season is here の設定 */
 @keyframes loop_animation_line {
     0% {
@@ -596,16 +702,16 @@ body.is-nav-open .header-navbtn span::before {
 
 .slide-line {
     display: flex;
-    animation: loop_animation_line 5s linear infinite;
+    animation: loop_animation_line 7s linear infinite;
 }
 
 .slide-inner {
     width: 100vw;
     text-align: center;
     background-color: #E4F4F8;
-    color: #fff;
+    color: skyblue;
     font-size: 18px;
-    font-weight: 100;
+    font-weight: 500;
     letter-spacing: 1.7px;
     padding: 20px 10px;
 }
@@ -678,12 +784,12 @@ body.is-nav-open .header-navbtn span::before {
 
 /* === TECNOLOGY === */
 
-#tecnology {
+.tecnology {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 .tecnology_movie {
-    padding: 150px 0;
+    padding: 200px 0 150px 0;
 }
 
 .tecnology_movie-inner {
