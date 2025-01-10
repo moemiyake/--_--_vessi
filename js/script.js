@@ -72,8 +72,8 @@ $(document).ready(function () {
         );
     });
 
-// 1/9 ★ここから！
-    // スクロール時にメニューアイテムをハイライト
+
+    // スクロール時にメニューアイテムとidを紐づける
     $(window).on('scroll', function () {
         var scrollPosition = $(window).scrollTop();
         var windowHeight = $(window).height();
@@ -96,7 +96,7 @@ $(document).ready(function () {
             }
 
             // TOP画面に来たら、全てのメニューアイテムに 'active-top' クラスを追加
-            if (scrollPosition > 400) {
+            if (scrollPosition > windowHeight) {
                 $('.gnav-list a').removeClass('active-top');
             } else {
                 $('.gnav-list a').addClass('active-top');
