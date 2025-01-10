@@ -77,14 +77,19 @@
 
         <section id="mv" class="mv">
             <!-- ⭐︎メインビジュアル⭐︎ -->
-            <!-- ★写真、あとで明るく直す -->
 
             <div class="mv_top-container">
                 <div class="mv-text">
                     <p class="catch-copy">雨の日のスニーカー</p>
                 </div>
                 <img class="mv-product" src="img/メイン2.png" alt="水を弾いているスニーカーの写真">
-                <h1><img class="mv-logo" src="img/VessiLogo-07.svg" alt="Vessiのロゴ"></h1>
+                <h1>
+                    <!-- レスポンシブ用にロゴ2種類用意(2色) -->
+                    <picture>
+                        <source class="mv-logo" srcset="img/logo/VessiLogo-09.svg" media="(min-width: 768px)">
+                        <img class="mv-logo" src="img/logo/VessiLogo-07.svg" alt="Vessiのロゴ">
+                    </picture>
+                </h1>
             </div>
 
             <div class="mv_second-container">
@@ -479,7 +484,7 @@
     <footer>
 
         <h1>
-            <img class="mv-logo" src="img/VessiLogo-07.svg" alt="Vessiのロゴ">
+            <img class="mv-logo" src="img/logo/VessiLogo-07.svg" alt="Vessiのロゴ">
         </h1>
 
         <div class="footer-sns">
