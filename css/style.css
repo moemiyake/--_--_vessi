@@ -61,15 +61,40 @@ h5 {
     color: #005864;
 }
 
+@media screen and (min-width: 768px){
+    h2 {
+        font-size: min(5.5vw, 64px);
+    }
+    
+    .h2box {
+        display: block;
+        margin: 30px 0 80px 0;
+    }
+    
+    h2 span {
+        font-size: min(2.2vw, 32px);
+    }
+    
+    h3 {
+        font-size: clamp(20px, 3.3vh, 36px);
+        color: #00B5CE;
+    }
+    
+    h5 {
+        font-size: 14px;
+    }
+}
+
+
+
+#mv,footer {
+    background: #e4f4f8;
+}
+
 #about p {
     color: #6C6C6C;
     font-size: 11px;
     text-align: center;
-    /* letter-spacing: 0.5px; */
-}
-
-#mv,footer {
-    background: #e4f4f8;
 }
 
 #style {
@@ -117,16 +142,43 @@ section {
     padding-bottom: 0;
 }
 
+@media screen and (min-width: 768px){
+    #about p {
+        font-size: min(2vh, 17px);
+        letter-spacing: 0.2vh;
+        line-height: 1.85em;
+    }
+    
+    footer {
+        font-size: 11px;
+    }
+    
+    video {
+        width: 50vw;
+        /* height: auto; */
+    }
+    
+    section {
+        padding: 150px 0;
+    }
+    
+    .movie {
+        padding: 7vw;
+    }
+}
+
+
+
+
+
+
 /* ボタンの設定 */
 
 .btnbox {
     display: flex;
     justify-content: center;
     margin: 70px auto 15px auto;
-    /* text-align: center; */
     width: auto;
-    /* height: auto; */
-
 }
 
 .btn {
@@ -138,15 +190,30 @@ section {
     border-radius: 30px;
 }
 
-
-
 .card-icon {
     width: 20%;
 }
 
+@media screen and (min-width: 768px){
+    .btnbox {
+        /* display: flex; */
+        /* justify-content: center; */
+        margin: 70px auto 15px auto;
+        width: auto;
+    }
+    
+    .btn {
+        padding: 20px 50px;
+        font-size: 20px;
+        letter-spacing: 1.2px;
+        border-radius: 70px;
+    }
+}
 
 
-/* ナビゲーションメニュー */
+
+
+/* === ナビゲーションメニュー === */
 
 /* - モバイル 表示に関する設定 - */
 .sp-only {
@@ -489,14 +556,9 @@ body.is-nav-open .header-navbtn span::before {
 
 @media screen and (min-width: 768px){
     .mv_top-container {
-        /* width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative; */
-        /* 1/10 ★ flexじゃなくする! */
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
     }
     
     
@@ -505,25 +567,28 @@ body.is-nav-open .header-navbtn span::before {
     }
     
     .mv-product {
-        width: 40vw;
+        width: 44vw;
         max-width: 584px;
+        position: absolute;
+        top: 47%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
     }
     
+    /* ロゴのsvg 白色に変更 */
     .mv-logo {
         aspect-ratio: 5 / 1;
-        width: 130vw;
+        width: 100vw;
         max-width: 1870px;
         object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
-    /* ロゴのsvg 色変更 */
 
-    
-    .mv_second-container {
-        width: 100%;
-        height: 100vh;
-        position: flex;
-    }
-    
 }
 
 
@@ -571,21 +636,61 @@ body.is-nav-open .header-navbtn span::before {
     white-space: nowrap;
 }
 
+
 .mv-umbrella {
     display: block;
     top: 43vh;
+    /* position: absolute;の方がいい？ */
     position: relative;
     left: 34%;
     width: 55vw;
 }
 
-.mv_bg-water {
-    position: absolute;
-    transform: translate(-1px,-1px);
+.mv_bg-wave {
     z-index: -1;
     display: block;
     background: #F8F8F8;
 }
+
+
+@media screen and (min-width: 768px){
+    .mv_second-container {
+        height: 110vh;
+        max-height: none;
+    }
+    
+    .mv-raindrops {
+        top: 20%;
+        left:55%;
+        width: min(10vw, 329px) ;
+    }
+    
+    .mv-lead {
+        top: 50%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .lead-shape {
+        width: 30vw;
+        max-width: 390px;
+    }
+    
+    .lead-copy {
+        font-size: min(1.8vw, 24px);
+        letter-spacing: 0.15em;
+        line-height: 1.8em;
+        left: 52%;
+    }
+    
+    .mv-umbrella {
+        position: absolute;
+        width: min(20vw, 170px);
+        top:60%;
+        left: 25%;
+    }
+}
+
 
 
 
@@ -646,14 +751,11 @@ body.is-nav-open .header-navbtn span::before {
     margin: 15px auto;
 }
 
-
-/* スニーカースライドアニメ */
 /* スニーカー写真 */
 .product-img {
     width: 550px;
     height: auto;
 }
-
 
 /* スニーカー写真　表示位置 */
 .left-img {
@@ -685,22 +787,93 @@ body.is-nav-open .header-navbtn span::before {
 }
 
 
+@media screen and (min-width: 768px){
+    .product {
+        margin: 10px 0;  /* product同士の上下余白 */
+        position: relative;
+    }
+    
+    .product-text {
+        display: flex;
+        flex-direction: column-reverse;
+
+        letter-spacing: 0.05em;
+        line-height: 1.7em;
+        left: 0;
+        padding-bottom: 0px;;
+    }
+
+    /* 「Storm Brust」の text 位置調整 */
+    .product:nth-child(3) .product-text {
+        padding-bottom: 30px;
+    }
+
+    
+    .product-name {
+        font-size: min(3.2vw, 48px);
+    }
+    
+    .product-category {
+        font-size: min(1.5vw, 20px);
+    }
+    
+    /* kid'sのパディング設定 */
+    .h2-kids {
+        margin: 100px 0 30px 0;
+    }
+    
+    #lineup .btnbox {
+        margin: 15px auto;
+    }
+
+
+    /* スニーカー写真 */
+    .product-img {
+        width: min(75vw, 870px);
+    }
+
+
+    /* スニーカー写真　表示位置 */
+    .left-img {
+        transform: none;
+    }
+
+    .right-img {
+        transform: none;
+    }
+
+
+    /* スニーカー名 表示位置 */
+    .product-text {
+        position: relative;
+    }
+
+    .product:first-child .left-text {
+        left: 0px;
+    }
+}
+
+
+
+
+
+/* スニーカースライドアニメ */
 /* スライド初期設定 */
 .product-inner {
     display: inline-block;
-    transition: all 1.5s;
+    transition: all 1.3s;
 }
 
 .fadein-left {
     display: inline-block;
     transform: translateX(-70%);
-    transition: all 1.5s;
+    transition: all 1.3s;
 }
 
 .fadein-right {
     display: inline-block;
     transform: translateX(70%);
-    transition: all 1.5s;
+    transition: all 1.3s;
 }
 
 
@@ -711,6 +884,26 @@ body.is-nav-open .header-navbtn span::before {
 
 .fadein-right.scrollin {
     transform: translateX(0);
+}
+
+
+@media screen and (min-width: 768px){
+    .product-inner {
+        /* display: inline-block; */
+        transition: all 1.5s;
+    }
+
+    .fadein-left {
+        /* display: inline-block; */
+        transform: translateX(-100%);
+        transition: all 1.5s;
+    }
+    
+    .fadein-right {
+        /* display: inline-block; */
+        transform: translateX(100%);
+        transition: all 1.5s;
+    }
 }
 
 
@@ -742,17 +935,52 @@ body.is-nav-open .header-navbtn span::before {
 }
 
 .slide-inner {
-    width: 100vw;
+    width: 80vw;
     text-align: center;
     background-color: #E4F4F8;
     color: skyblue;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1.7px;
+    padding: 20px 10px;
+}
+
+.slide-inner-s {
+    width: 30vw;
+    text-align: center;
+    background-color: #E4F4F8;
+    color: skyblue;
+    font-size: 15px;
+    font-weight: 100;
     letter-spacing: 1.7px;
     padding: 20px 10px;
 }
 
 
+@media screen and (min-width: 768px){
+    .slide-area {
+        transform: translateY(150px);
+    }
+
+    .slide-line {
+        /* display: flex; */
+        animation: loop_animation_line 12s linear infinite;
+    }
+
+    .slide-inner {
+        width: 50vw;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 1.8px;
+    }
+    
+    .slide-inner-s {
+        width: 20vw;
+        font-size: 15px;
+        font-weight: 100;
+        letter-spacing: 1.8px;
+    }
+}
 
 
 
@@ -815,9 +1043,58 @@ body.is-nav-open .header-navbtn span::before {
 }
 
 
+@media screen and (min-width: 768px){
+    .about {
+        background-image: url(../img/水面_pc.png);
+        /* ★仮背景 */
+        background-size: cover;
+        /* padding-bottom: 200px; */
+    }
+    
+    .about_body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .card:nth-child(2n-1) {
+        align-self: flex-start;
+    }
+
+    .card:nth-child(2n) {
+        align-self: flex-end;
+    }
+    
+    .card {
+        border-radius: 50px;
+        width: min(46vw, 650px);
+        height: 45vh;
+        padding: 50px;
+        margin: 10px;
+        margin-top: 100px;
+    }
+    
+    .card-icon {
+        height: min(11.5vh, 109px);
+        margin-bottom: 13px;
+    }
+    
+    .card:nth-child(2) .card-inner .card-icon {
+        width: min(10.5vw, 130px);
+        margin-bottom: 7px;
+    }
+    
+    .card-inner h3 {
+        margin-bottom: 10px;
+    }
+}
 
 
 
+
+/* 1/12 ここから */
 /* === TECNOLOGY === */
 
 .tecnology {
@@ -1126,7 +1403,7 @@ footer {
     position: relative;
 }
 
-.footer-drop {
+.footer_bg-wave {
     position: absolute;
     left: -5%;
     bottom: -5px;
