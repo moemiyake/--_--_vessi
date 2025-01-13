@@ -731,7 +731,7 @@ body.is-nav-open .header-navbtn span::before {
 }
 
 .product-name {
-    font-style: 16px;
+    font-size: 16px;
 }
 
 .product-category {
@@ -815,6 +815,8 @@ body.is-nav-open .header-navbtn span::before {
     
     .product-category {
         font-size: min(1.5vw, 20px);
+        margin-bottom: 12px;
+        line-height: 1.5em;
     }
     
     /* kid'sのパディング設定 */
@@ -1101,37 +1103,65 @@ body.is-nav-open .header-navbtn span::before {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+   /* -- 紹介動画 -- */
 .tecnology_movie {
-    padding: 200px 0 150px 0;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
 }
 
 .tecnology_movie-inner {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 80% 20%;
-    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
 }
 
 .tecnology_movie video {
-    grid-row-start: 1;
     width: 100%;
-    height: auto;
 }
 
 .tecnology_movie p {
-    grid-row-start: 2;
+    display: inline-block;
+    width: 100%;
     font-size: 14px;
     line-height: 25px;
     text-align: center;
+    padding-top: 10vh;
 }
 
+@media screen and (min-width: 768px){
+    .tecnology {
+        padding-bottom: 200px;
+    }
+
+    .tecnology_movie-inner {
+        flex-direction: row-reverse;
+        align-items: center;
+        height: auto;
+        width: 90vw;
+    }
+    
+    .tecnology_movie video {
+        width: 50%;
+        height: auto;
+    border-radius: 15px;
+    }
+    
+    .tecnology_movie p {
+        width: 50%;
+    }
+}
+
+
+   /* 紹介画像(分解) */
 .tecnology_box {
     height: 100vh;
-
     position: relative;
 }
 
 .tecnology_scroll {
+    display: none;
+    /* ↑1/11 ★ 仮に！ */
     z-index: 3;
     position: relative;
     height: 80vh;
@@ -1224,23 +1254,6 @@ dl {
 
 
 
-
-/* - ループアニメーション　２段目 - */
-@keyframes loop_animation_right {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  .loop_right {
-    display: flex;
-    animation: loop_animation_right 10s linear infinite;
-  }
-
-
 /* - ループアニメーション　1,３段目 - */
 @keyframes loop_animation_left {
     0% {
@@ -1255,6 +1268,24 @@ dl {
     display: flex;
     animation: loop_animation_left 15s linear infinite;
 }
+
+
+/* - ループアニメーション　２段目 - */
+@keyframes loop_animation_right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+  
+.loop_right {
+    display: flex;
+    animation: loop_animation_right 10s linear infinite;
+}
+
+
 
 
 
@@ -1293,12 +1324,51 @@ dl {
 
     /* ホバーすると、写真を少し大きくする */
 .style__loop_area img:hover {
-    transform: scale(1.03);
-    box-shadow: -5px 8px 8px rgba(0, 0, 0, 0.2);
+transform: scale(1.03);
+box-shadow: -5px 8px 8px rgba(0, 0,0, 0.2);
+}
+
+.style__loop_area:hover {
+overflow: visible;
+}
+
+@media screen and (min-width: 768px){
+
+
+    .loop_left {
+        animation: loop_animation_left 20s linear infinite;
     }
-    .style__loop_area:hover {
-    overflow: visible;
+
+    .loop_right {
+        animation: loop_animation_right 15s linear infinite;
     }
+
+    /* - 写真の表示設定 - */
+
+        /* 上下の間隔 */
+    .style__loop_area {
+    margin:40px 0;
+    }
+
+        /* 1,3段目 */
+    .loop_l_box {
+        margin-left: 30px;
+    }
+
+    .loop_l_box img {
+        width: 330px;
+    }
+
+        /* 2段目 */
+    .loop_r_box {
+        margin-right: 30px;
+    }
+
+    .loop_r_box img {
+        width: 210px;
+    }
+}
+
 
 
 
@@ -1306,7 +1376,6 @@ dl {
 
 .question {
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1314,11 +1383,10 @@ dl {
 
     position: relative;
     overflow: hidden;
-    padding-bottom: 180px;
 }
 
 .question_body {
-    padding-bottom: 60px;
+    padding-bottom: 10px;
 }
 
 .question_body ul {
@@ -1397,6 +1465,71 @@ h4.q-question {
 }
 
 
+@media screen and (min-width: 768px){
+    .question {
+        padding-bottom: 200px;
+    }
+    
+    .question_body {
+        padding-bottom: 60px;
+    }
+
+    
+    /* 各 Q&A 段の設定 */
+    .q-content {
+        width: 500px;
+    }
+    
+    h4.q-question {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17.5px;
+        padding: 16px 20px;
+    }
+
+        /* 追加↓Qを中央寄せにする */
+    h4.q-question span {
+        position: absolute;
+        right: 20px;
+    }
+    
+    .q-answer {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 25px;
+        padding: 20px 20px 50px 20px;
+    
+        display: none;  /* トグルで表示・非表示を切り替える */
+    }
+
+
+    /* Q&A アコーディオン */
+    .q-question span {
+        /* position: relative; */
+        width: 20px;
+        height: 20px;
+    }
+    
+    .q-openclose::before,
+    .q-openclose::after {
+        border-radius: 50px;
+    }
+
+    .q-openclose::before {
+        top: 9px;
+    }
+    
+    .q-openclose::after {
+        bottom: 9px;
+    }
+    
+
+}
+
+
+
 /* === フッター === */
 
 footer {
@@ -1404,11 +1537,10 @@ footer {
 }
 
 .footer_bg-wave {
-    position: absolute;
-    left: -5%;
-    bottom: -5px;
-    width: 110%;
-    /* margin: 0 auto; */
+    position: relative;
+    width: 100vw;
+    margin: 0 auto;
+    background-color: #F8F8F8;
 }
 
 footer h1 {
@@ -1416,10 +1548,26 @@ footer h1 {
     width: 100%;
 }
 
-footer img {
-    display: inline-block;
-    margin: 95px auto 82px auto;
+
+@media screen and (min-width: 768px){
+
+    footer img.mv-logo {
+        /* display: inline-block; */
+        
+        width: 40%;
+        max-width: 500px;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        z-index: 0;
+        margin: 100px 0 50px 0;
+    }
 }
+
+
+
+
 
     /* === SNS === */
 .footer-sns {
@@ -1462,7 +1610,48 @@ footer img {
     margin-right: 0px;
 }
 
-    /* === View More === */
+@media screen and (min-width: 768px){
+
+    .footer-sns {
+        /* text-align: center; */
+        /* color: #005864; */
+        width: 100%;
+        /* max-width: 500px; */
+        line-height: 1;
+        padding-bottom: 70px;
+    }
+    
+    .footer-sns p {
+        font-size: min(2.7vh, 16px);
+        /* display: flex; */
+        /* justify-content: center; */
+    }
+    
+    .footer-sns span {
+        top: -2.5px;
+        width: 100px;
+        height: 0.5px;
+    }
+    
+    .sns-box {
+        line-height: 35px;
+    }
+    
+    .sns-box i {
+        font-size: min(5vh, 27px);
+        margin-right: min(3.5vh, 24px);
+    }
+    
+    .sns-box i:last-child {
+        margin-right: 0px;
+    }
+
+}
+
+
+
+
+    /* === View More Vessi === */
 .footer-more {
     position: relative;
     text-align: center;
@@ -1491,8 +1680,48 @@ footer img {
     display: block;
     content: '';
     width: 0.5px;
-    height: 130px;
+    height: 100%;
     background-color: #005864;
 
     left: -20px;
+}
+
+@media screen and (min-width: 768px){
+    .footer-more {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        /* text-align: center; */
+        /* background-color: #fff; */
+    }
+    
+    .more-box {
+        /* background: skyblue; */
+        /* display: inline-block; */
+        /* position: relative; */
+        width: 270px;
+        margin: 0;
+        /* text-align: left; */
+    }
+    
+    .footer-more h5 {
+        margin-bottom: 15px;
+    }
+    
+    .footer-more li {
+        margin-bottom: 17px;
+        font-size: min(1.7vh, 11px);
+    }
+    
+    
+    .more-box::before {
+        /* position: absolute; */
+        /* display: block; */
+        /* content: ''; */
+        /* width: 0.5px; */
+        height: 100%;
+        /* background-color: #005864; */
+    
+        left: -20px;
+    }
 }

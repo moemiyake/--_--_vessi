@@ -107,7 +107,7 @@
             </div>
 
             <!-- ラインナップの上の波(背景) -->
-            <img class="mv_bg-wave" src="img/bg-wave.svg" alt="">
+            <img class="mv_bg-wave" src="img/bg-wave/bg-wave.svg" alt="">
         </section>
 
         <section id="lineup" class="lineup">
@@ -304,18 +304,6 @@
 
         </section>
 
-        <section class="movie">
-            <div class="tecnology_movie">
-                <div class="tecnology_movie-inner">
-                    <video src="video/AboutVessi.mp4" loop autoplay muted></video>
-                    <p>
-                        雨。雪。ぬかるみ。泥。日常。<br>
-                        毎日、いつでもどこでも使えるスニーカー。
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <section id="tecnology" class="tecnology">
             <!-- ⭐︎テクノロジー⭐︎ -->
             <div class="tecnology_box">
@@ -324,6 +312,17 @@
                         TECNOLOGY<br>
                         <span>テクノロジー</span>
                     </h2>
+                </div>
+
+                <div class="tecnology_movie">
+                    <div class="tecnology_movie-inner">
+                        <video src="video/AboutVessi.mp4" loop autoplay muted>
+                        </video>
+                        <p>
+                            雨。雪。ぬかるみ。泥。日常。<br>
+                            毎日、いつでもどこでも使えるスニーカー。
+                        </p>
+                    </div>
                 </div>
 
                 <div class="tecnology_scroll">
@@ -494,8 +493,6 @@
                     </li>
                 </ul>
 
-                <img class="footer_bg-wave" src="img/footer-drop.png" alt="水滴の背景画像">
-
             </div>
 
 
@@ -509,10 +506,18 @@
 
     <footer>
 
+        <!-- <img class="footer_bg-wave" src="img/bg-wave/footer_bg-wave-pc.svg" alt="水の背景画像"> -->
+
+
+        <picture>
+            <source class="footer_bg-wave" srcset="img/bg-wave/footer_bg-wave-pc.svg" media="(min-width: 768px)">
+            <img class="footer_bg-wave" src="img/bg-wave/footer_bg-wave-sp.svg" alt="水の背景画像">
+        </picture>
+
         <h1>
             <img class="mv-logo" src="img/logo/VessiLogo-07.svg" alt="Vessiのロゴ">
         </h1>
-
+        
         <div class="footer-sns">
             <p>Follow us</p>
             <span></span>
