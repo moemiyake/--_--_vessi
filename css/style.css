@@ -1096,7 +1096,6 @@ body.is-nav-open .header-navbtn span::before {
 
 
 
-/* 1/12 ここから */
 /* === TECNOLOGY === */
 
 .tecnology {
@@ -1160,7 +1159,7 @@ body.is-nav-open .header-navbtn span::before {
 }
 
 .tecnology_scroll {
-    display: none;
+    /* display: none; */
     /* ↑1/11 ★ 仮に！ */
     z-index: 3;
     position: relative;
@@ -1691,17 +1690,11 @@ footer h1 {
         position: absolute;
         bottom: 10%;
         left: 10%;
-        /* text-align: center; */
-        /* background-color: #fff; */
     }
     
     .more-box {
-        /* background: skyblue; */
-        /* display: inline-block; */
-        /* position: relative; */
         width: 270px;
         margin: 0;
-        /* text-align: left; */
     }
     
     .footer-more h5 {
@@ -1715,13 +1708,7 @@ footer h1 {
     
     
     .more-box::before {
-        /* position: absolute; */
-        /* display: block; */
-        /* content: ''; */
-        /* width: 0.5px; */
         height: 100%;
-        /* background-color: #005864; */
-    
         left: -20px;
     }
 }

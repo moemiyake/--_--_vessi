@@ -164,3 +164,8 @@ $(document).ready(function () {
 
 
 // });
+
+
+// TOP ボタンの設定
+
+// PC版 footer g-navを非表示にする 
