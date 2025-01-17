@@ -475,6 +475,26 @@ body.is-nav-open .header-navbtn span::before {
 }
 
 
+    /* 切替ボタン 使わないかも？*/
+.sound_toggle {
+    position: fixed;
+    z-index: 5;
+    width: 40px;
+    right: 60px;
+    top: 30px;
+}
+
+.sound_toggle button {
+    border: none;
+    background-color: transparent;
+}
+
+.sound_toggle img {
+    box-shadow: 2px 2px 5px rgba(0, 88, 100, 0.24);
+}
+
+
+
 @media screen and (min-width: 768px){
     .sound-area p {
         font-size: 5vw;  /* 60px */
@@ -1566,8 +1586,6 @@ footer h1 {
 
 
 
-
-
     /* === SNS === */
 .footer-sns {
     text-align: center;
@@ -1657,7 +1675,6 @@ footer h1 {
 }
 
 .more-box {
-    /* background: skyblue; */
     display: inline-block;
     position: relative;
     width: 220px;
@@ -1706,9 +1723,38 @@ footer h1 {
         font-size: min(1.7vh, 11px);
     }
     
-    
     .more-box::before {
         height: 100%;
         left: -20px;
     }
 }
+
+
+
+
+/* === TOPに戻るボタン === */
+
+.footer-totop img {
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    .footer-totop {
+        /* display: block; */
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+    }
+    
+    .footer-totop img {
+        display: block;
+        width: min(10vw, 100px);
+        transition: 0.7s ease-in-out;
+    }
+
+    .footer-totop img:hover {
+        translate: 0 -18px;
+    }
+}
+
+

@@ -169,3 +169,35 @@ $(document).ready(function () {
 // TOP ボタンの設定
 
 // PC版 footer g-navを非表示にする 
+
+
+
+// === FOOTER ===
+    // TOPに戻るボタン
+    //表示設定
+$(function () {
+    const pageTop = $("#totop");
+
+    pageTop.hide(); // 最初はボタンを非表示にする
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > $('#question').offset().top) { // #questionの位置までスクロールしたら表示
+        pageTop.fadeIn(); // 100px以上スクロールしたらボタンをフェードイン
+      } else {
+        pageTop.fadeOut(); // 100px以下になったらボタンをフェードアウト
+      }
+    });
+
+    //クリック時の設定
+    pageTop.click(function () {
+        //#idをクリックした時、ページの閲覧履歴を残さないようにする
+        event.preventDefault();
+        
+      $("body,html").animate(
+        {
+          scrollTop: 0, // 上から0pxの位置に戻る
+        },
+        1500 // 1000ミリ秒かけて戻る
+      );
+      return false;
+    });
+  });
