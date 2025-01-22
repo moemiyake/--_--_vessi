@@ -161,9 +161,92 @@ $(document).ready(function () {
 //     $('.tecnology_body').scroll(function () {
 //         $('tecnology-dt').fadeIn(400)
 //     });
-
-
 // });
+
+//-------------------------------------------------------------
+// 追加箇所
+
+/**
+ * マジックレイヤーのクリックイベント
+ */
+const magicLayerText = document.getElementById("text_magicLayer");
+document.getElementById("shoesImg_magicLayer").addEventListener("click", () => {
+
+        magicLayerText.classList.toggle('open');
+
+});
+
+/**
+ * クッションのクリックイベント
+ */
+const cushionText = document.getElementById("text_cushion");
+document.getElementById("shoesImg_cushion").addEventListener("click", () => {
+
+        cushionText.classList.toggle('open');
+
+});
+
+/**
+ * ソールのクリックイベント
+ */
+const soleText = document.getElementById("text_sole");
+document.getElementById("shoesImg_sole").addEventListener("click", () => {
+
+    soleText.classList.toggle('open');
+
+});
+
+/**
+ * スクロールイベント
+ */
+// 前回のスクロール位置
+let lastScrollY = window.scrollY;
+// 下スクロールイベントフラグ
+var scrollFlag = true;
+window.addEventListener("scroll", () => {
+    const tecnologyImg = document.querySelectorAll(".tecnology-inner");
+    const tecnologyContainer = document.querySelector('.tecnology_scroll');
+    // 現在の位置
+    const currentScrollY = window.scrollY;
+    // テクノロジー要素の位置
+    const tecnologyPosition = tecnologyContainer.getBoundingClientRect();
+    // クッション画像の位置
+    const cushionPosition = tecnologyImg[1].getBoundingClientRect();
+    // 画面の25%の位置
+    const windowquarter = window.innerHeight / 4;
+    // アニメーション開始位置
+    const containerHalfway = tecnologyPosition.top + currentScrollY - windowquarter;
+
+    // 各要素を離す
+    if (currentScrollY >= containerHalfway && scrollFlag) {
+        scrollFlag = false;
+        tecnologyImg[0].style.transform = "translateY(-80px)";
+        tecnologyImg[2].style.transform = "translateY(80px)";
+    }
+    if (currentScrollY < containerHalfway) {
+        scrollFlag = true;
+    }
+
+    // 各要素の収束
+    if (cushionPosition.top <= windowquarter && cushionPosition.bottom >= windowquarter) {
+        tecnologyImg[0].style.transform = "translateY(0px)";
+        tecnologyImg[2].style.transform = "translateY(0px)";
+        // 表示されているテキストを閉じる
+        magicLayerText.classList.remove('open');
+        cushionText.classList.remove('open');
+        soleText.classList.remove('open');
+        scrollFlag = false;
+    }
+
+    // 前回のスクロール位置を更新
+    lastScrollY = currentScrollY;
+
+});
+
+// ここまで
+//-------------------------------------------------------------
+
+
 
 
 // TOP ボタンの設定
