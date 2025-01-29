@@ -28,6 +28,33 @@ $(document).ready(function () {
 });
 
 
+// サウンドの on / off ボタンを作る
+$(function () {
+	var isPlaying = false;
+	$("#sound_btn").on("click", function () {
+		if (isPlaying) {
+			audio.pause();
+		} else {
+			audio.play();
+		}
+	});
+	audio.onplaying = function() {
+		isPlaying = true;
+        $("#sound_btn").children("img").attr("src", "img/icon/music-mute.png");
+        $("#sound_btn").addClass("playing");
+        // ここにクラスつける記述?
+	};
+	audio.onpause = function() {
+		isPlaying = false;
+
+        $("#sound_btn").children("img").attr("src", "img/icon/music-play.png");
+        $("#sound_btn").removeClass("playing");
+        // ここにクラスつける記述
+	};
+});
+
+
+
 
 
 // === ハンバーガーメニュー ===

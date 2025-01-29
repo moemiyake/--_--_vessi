@@ -367,6 +367,7 @@ section {
         background-color: rgba(89, 193, 188, 0.18);
         box-shadow: 3px 3px 22px rgba(0, 88, 100, 0.31);
         border-radius: 20px;
+        -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
         transform: translateX(120%);
         transition: transform .7s;
@@ -426,6 +427,7 @@ body.is-nav-open .header-navbtn span::before {
     left: 0;
     top: 0;
     background-color: rgba(174, 196, 199, 0.33);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     text-transform: uppercase;
     font-family: 'Noto Sans', sans-serif;
@@ -475,26 +477,6 @@ body.is-nav-open .header-navbtn span::before {
 }
 
 
-    /* 切替ボタン 使わないかも？*/
-.sound_toggle {
-    position: fixed;
-    z-index: 5;
-    width: 40px;
-    right: 60px;
-    top: 30px;
-}
-
-.sound_toggle button {
-    border: none;
-    background-color: transparent;
-}
-
-.sound_toggle img {
-    box-shadow: 2px 2px 5px rgba(0, 88, 100, 0.24);
-}
-
-
-
 @media screen and (min-width: 768px){
     .sound-area p {
         font-size: 5vw;  /* 60px */
@@ -522,6 +504,30 @@ body.is-nav-open .header-navbtn span::before {
         margin-left: 5%;
     }
 }
+
+
+
+
+/* サウンド 選択後 - ON OFF 切り替えボタン */
+.sound_toggle {
+    position: fixed;
+    z-index: 5;
+    width: 40px;
+    right: 60px;
+    top: 30px;
+    background-image: url("../img/icon/８分音符_アイコン.png");
+}
+
+.sound_toggle button {
+    border: none;
+    background-color: transparent;
+}
+
+/* .sound_toggle img {
+    box-shadow: 2px 2px 5px rgba(0, 88, 100, 0.24);
+} */
+
+
 
 
 
