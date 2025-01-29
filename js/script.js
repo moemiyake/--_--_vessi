@@ -12,10 +12,12 @@ const off = document.querySelector("#off");
 
 //ONボタンを押したら音が流れる
 on.addEventListener("click", () => {
+    const audio = new Audio("../music/Singin' In The Rain.mp3");
     audio.play();
 });
 //OFFボタンを押したら音が止まる
 off.addEventListener("click", () => {
+    const audio = new Audio("../music/Singin' In The Rain.mp3");
     audio.pause();
 });
 
@@ -135,6 +137,11 @@ $(document).ready(function () {
 
 
 
+// === ★ フェードイン ===
+$('h2').fadeIn(1000);
+
+
+
 
 // === Q & A === //
 
@@ -175,7 +182,7 @@ $(document).ready(function () {
                 scroll = $(window).scrollTop(),
                 windowHeight = $(window).height();
 
-            if (scroll > elemPos - windowHeight + 150) {
+            if (scroll > elemPos - windowHeight + 120) {
                 $(this).addClass('scrollin');
             }
         });
@@ -311,3 +318,5 @@ $(function () {
       return false;
     });
   });
+
+  

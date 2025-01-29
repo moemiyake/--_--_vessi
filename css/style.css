@@ -512,9 +512,9 @@ body.is-nav-open .header-navbtn span::before {
 .sound_toggle {
     position: fixed;
     z-index: 5;
-    width: 40px;
+    width: 47px;
     right: 60px;
-    top: 30px;
+    top: 27.5px;
     background-image: url("../img/icon/８分音符_アイコン.png");
 }
 
@@ -523,10 +523,16 @@ body.is-nav-open .header-navbtn span::before {
     background-color: transparent;
 }
 
-/* .sound_toggle img {
-    box-shadow: 2px 2px 5px rgba(0, 88, 100, 0.24);
-} */
-
+@media screen and (min-width: 768px){
+    .sound_toggle {
+        /* position: fixed; */
+        /* z-index: 5; */
+        width: 4.6vw;
+        right: 20px;
+        top: 20px;
+        background-image: url("../img/icon/８分音符_アイコン.png");
+    }
+}
 
 
 
@@ -574,11 +580,15 @@ body.is-nav-open .header-navbtn span::before {
     object-fit: cover;
 }
 
-.mv_second-container {
-    width: 100%;
-    height: 100vh;
-    position: flex;
+h1 img.mv-logo_pc_only {
+    display: none;
+    /* position: absolute; */
+    /* left: 100px; */
+    /* top: 50px; */
+    /* width: 20vw; */
+    /* position: fixed; */
 }
+
 
 @media screen and (min-width: 768px){
     .mv_top-container {
@@ -615,6 +625,21 @@ body.is-nav-open .header-navbtn span::before {
         z-index: 1;
     }
 
+    .mv_second-container {
+        width: 100%;
+        height: 100vh;
+        position: flex;
+    }
+
+    h1 img.mv-logo_pc_only {
+        /* display: inline-block; */
+        display: none;
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        width: 20vw;
+        position: fixed;
+    }
 }
 
 
@@ -744,6 +769,24 @@ body.is-nav-open .header-navbtn span::before {
     overflow: hidden;
 }
 
+.lineup_background1 {
+    position: absolute;
+    width: min(27vw, 247px);
+    right: -15px;
+    transform: translateY(-10vh);
+}
+
+.lineup_background2 {
+    position: absolute;
+    width: min(25vw, 222px);
+    left: 0px;
+    transform: translateY(70vh);
+}
+
+.lineup_background3 {
+    display: none;
+}
+
 .product {
     margin: 10px 0;  /* product同士の上下余白 */
     text-align: center;
@@ -814,6 +857,28 @@ body.is-nav-open .header-navbtn span::before {
 
 
 @media screen and (min-width: 768px){
+
+    .lineup_background1 {
+        width: min(19vw, 247px);
+        right: -15px;
+        transform: translateY(55px);
+    }
+    
+    .lineup_background2 {
+        width: min(17.5vw, 222px);
+        left: 0px;
+        transform: translateY(-50px);
+    }
+    
+    .lineup_background3 {
+        display: block;
+        position: absolute;
+
+        width: min(25vw, 500px);
+        right: 0;
+        transform: translateY(-20vh);
+    }
+    
     .product {
         margin: 10px 0;  /* product同士の上下余白 */
         position: relative;
@@ -1154,50 +1219,24 @@ body.is-nav-open .header-navbtn span::before {
     padding-top: 10vh;
 }
 
-@media screen and (min-width: 768px){
-    .tecnology {
-        padding-bottom: 200px;
-    }
-
-    .tecnology_movie-inner {
-        flex-direction: row-reverse;
-        align-items: center;
-        height: auto;
-        width: 90vw;
-    }
-    
-    .tecnology_movie video {
-        width: 50%;
-        height: auto;
-    border-radius: 15px;
-    }
-    
-    .tecnology_movie p {
-        width: 50%;
-    }
-}
 
 
    /* 紹介画像(分解) */
-.tecnology_box {
+   .tecnology_box {
     height: 100%;
     position: relative;
 }
 
 .tecnology_scroll {
-    /* display: none; */
-    /* ↑1/11 ★ 仮に！ */
     z-index: 3;
     position: relative;
-    height: 80vh;
+    height: 100vh;
     overflow: auto;
 }
 
 .tecnology_body {
     z-index: 2;
     padding-top: 5px;
-    /* background-color: #fff; */
-    /* height: fit-content; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1220,7 +1259,6 @@ dl {
     top: 50vh;
     z-index: 1;
 }
-
 
 
 .tecnology-inner{
@@ -1265,11 +1303,192 @@ dl {
     margin-top: 5px;
 }
 
-
 .tecnology-dd{
     font-size: 11.5px;
     line-height: 20px;
 }
+
+#shoesImg_magicLayer {
+    z-index: 1;
+    transform: translateY(7px);
+}
+
+#shoesImg_cushion {
+    z-index: auto;
+}
+
+#shoesImg_sole {
+    z-index: 0;
+    transform: translateY(-7px);
+}
+
+.tap_btn {
+    position: absolute;
+    width: 35px;
+    right: 0;
+    top: 0;
+}
+
+.tap_cushion {
+    top: 45px;
+}
+
+.tap_sole {
+    top: -15px;
+}
+
+
+@media screen and (min-width: 768px){
+    .tecnology {
+        padding-bottom: 200px;
+    }
+
+    .tecnology_movie-inner {
+        flex-direction: row-reverse;
+        align-items: center;
+        height: auto;
+        width: 90vw;
+    }
+    
+    .tecnology_movie video {
+        width: 50%;
+        height: auto;
+    border-radius: 15px;
+    }
+    
+    .tecnology_movie p {
+        width: 50%;
+    }
+
+
+
+       /* 紹介画像(分解) */
+    .tecnology_box {
+        height: 100%;
+        position: relative;
+    }
+
+    .tecnology_scroll {
+        z-index: 3;
+        position: relative;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .tecnology_body {
+        z-index: 2;
+        padding-top: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    dl {
+        /* z-index: 1; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        /* height: 500vh; */
+    }
+
+    .tecnology_body.fixed {
+        position: fixed;
+        top: 50vh;
+        z-index: 1;
+    }
+
+
+
+    .tecnology-inner{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+        width: 40vw;
+        height: auto;
+        margin: -11px 0;
+
+        transition: transform 1.0s ease;
+    }
+
+    .tecnology-inner img {
+        display: inline-block;
+    }
+
+
+    /* ---------------------------------------------------- */
+    /* 追加箇所 */
+    .tecnology-inner img:hover {
+        transform: translateY(-5px);
+    }
+
+    .tecnology__text {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+    }
+
+    .tecnology__text.open {
+        height: 100px;  
+    }
+
+    /* ここまで */
+    /* ---------------------------------------------------- */
+
+    .tecnology-dt {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .tecnology-dd{
+        font-size: 11.5px;
+        line-height: 20px;
+    }
+
+    #shoesImg_magicLayer {
+        z-index: 1;
+        transform: translateY(2vw);
+    }
+
+    #shoesImg_cushion {
+        z-index: auto;
+    }
+
+    #shoesImg_sole {
+        z-index: 0;
+        transform: translateY(-2vw);
+    }
+
+    #text_magicLayer dt {
+        margin-top: 20px;
+    }
+
+    .tap_btn {
+        position: absolute;
+        width: 55px;
+        right: 0;
+        top: 0;
+    }
+
+    .tap_magicLayer {
+        top: 25px;
+    }
+
+    .tap_cushion {
+        top: 100px;
+    }
+
+    .tap_sole {
+        top: -35px;
+    }
+
+}
+
 
 
 
@@ -1780,4 +1999,12 @@ footer h1 {
     }
 }
 
+
+/* === コピーライト === */
+small {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    opacity: 0.5;
+}
 
