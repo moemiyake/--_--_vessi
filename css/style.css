@@ -456,9 +456,10 @@ body.is-nav-open .header-navbtn span::before {
     border: none;
     color: #fff;
     background: transparent;
-    padding: 1em;
     font-size: 4vw;  /* 15px */
     letter-spacing: 1.6px;
+    cursor: pointer;
+    margin: 1em;
 }
 
 .sound-button img {
@@ -486,7 +487,6 @@ body.is-nav-open .header-navbtn span::before {
     }
     
     .sound-button {
-        padding: 1em;
         font-size: 2vw;  /* 20px */
         letter-spacing: 1px;
     }
@@ -521,6 +521,7 @@ body.is-nav-open .header-navbtn span::before {
 .sound_toggle button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px){
