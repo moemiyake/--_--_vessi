@@ -1435,20 +1435,22 @@ dl {
     }
 
     .tecnology__text.open {
-        height: 100px;  
+        height: 110px;  
     }
 
     /* ここまで */
     /* ---------------------------------------------------- */
 
     .tecnology-dt {
-        font-size: 18px;
+        font-size: 25px;
         margin-top: 5px;
+        letter-spacing: 2px;
     }
 
     .tecnology-dd{
-        font-size: 11.5px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 2px;
     }
 
     #shoesImg_magicLayer {
