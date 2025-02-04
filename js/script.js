@@ -1,26 +1,80 @@
 // === BGM ===
 
 //オーディオを登録する
-const audio = new Audio("../music/Singin' In The Rain.mp3");
+// const audio = new Audio("music/Singin_In_The_Rain.mp3");
 
+
+//onボタンを連れてくる
+// const on = document.querySelector("#on");
+//offボタンを連れてくる
+// const off = document.querySelector("#off");
+
+
+// //ONボタンを押したら音が流れる
+// on.addEventListener("click", () => {
+//     // const audio = new Audio("../music/Singin In The Rain.mp3");
+//     audio.play();
+// });
+// //OFFボタンを押したら音が止まる
+// off.addEventListener("click", () => {
+//     // const audio = new Audio("../music/Singin_In_The_Rain.mp3");
+//     audio.pause();
+// });
+
+
+// // "SOUND"ボタンを押すと、#soundをフェードアウトする
+// $(document).ready(function () {
+//     $('.sound-button').on('click', () => {
+//         $('#sound').fadeOut(1000);
+//     });
+// });
+
+
+
+
+// // サウンドの on / off ボタンを作る
+// $(function () {
+// 	var isPlaying = false;
+// 	$("#sound_btn").on("click", function () {
+// 		if (isPlaying) {
+// 			audio.pause();
+// 		} else {
+// 			audio.play();
+// 		}
+// 	});
+// 	audio.onplaying = function() {
+// 		isPlaying = true;
+//         $("#sound_btn").children("img").attr("src", "img/icon/music-mute.png");
+//         $("#sound_btn").addClass("playing");
+// 	};
+// 	audio.onpause = function() {
+// 		isPlaying = false;
+//         $("#sound_btn").children("img").attr("src", "img/icon/music-play.png");
+//         $("#sound_btn").removeClass("playing");
+// 	};
+// });
+
+
+
+// === BGM ===
+
+
+//オーディオを登録する
+const audio = new Audio("music/Singin_In_The_Rain.mp3");
 
 //onボタンを連れてくる
 const on = document.querySelector("#on");
 //offボタンを連れてくる
 const off = document.querySelector("#off");
 
-
 //ONボタンを押したら音が流れる
 on.addEventListener("click", () => {
-    const audio = new Audio("../music/Singin' In The Rain.mp3");
     audio.play();
 });
 //OFFボタンを押したら音が止まる
 off.addEventListener("click", () => {
-    const audio = new Audio("../music/Singin' In The Rain.mp3");
     audio.pause();
 });
-
 
 // "SOUND"ボタンを押すと、#soundをフェードアウトする
 $(document).ready(function () {
@@ -30,28 +84,28 @@ $(document).ready(function () {
 });
 
 
-
-
 // サウンドの on / off ボタンを作る
 $(function () {
-	var isPlaying = false;
-	$("#sound_btn").on("click", function () {
-		if (isPlaying) {
-			audio.pause();
-		} else {
-			audio.play();
-		}
-	});
-	audio.onplaying = function() {
-		isPlaying = true;
-        $("#sound_btn").children("img").attr("src", "img/icon/music-mute.png");
-        $("#sound_btn").addClass("playing");
-	};
-	audio.onpause = function() {
-		isPlaying = false;
-        $("#sound_btn").children("img").attr("src", "img/icon/music-play.png");
-        $("#sound_btn").removeClass("playing");
-	};
+    let isPlaying = false;
+    $("#sound_btn").on("click", function () {
+        if (isPlaying) {
+            console.log("isPlaying：", isPlaying);
+            audio.pause();
+        } else {
+            console.log("isPlaying：", isPlaying);
+            audio.play();
+        }
+    });
+    audio.onplaying = function() {
+        isPlaying = true;
+    $("#sound_btn").children("img").attr("src", "img/icon/music-play.png");
+    $("#sound_btn").addClass("playing");
+    };
+    audio.onpause = function() {
+        isPlaying = false;
+    $("#sound_btn").children("img").attr("src", "img/icon/music-mute.png");
+    $("#sound_btn").removeClass("playing");
+    };
 });
 
 
