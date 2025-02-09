@@ -249,11 +249,7 @@ $(document).ready(function () {
 
 
 // === TECNOLOGY ===
-// $(document).ready(function () {
-//     $('.tecnology_body').scroll(function () {
-//         $('tecnology-dt').fadeIn(400)
-//     });
-// });
+
 
 //-------------------------------------------------------------
 // 追加箇所
@@ -337,6 +333,33 @@ window.addEventListener("scroll", () => {
 
 // ここまで
 //-------------------------------------------------------------
+
+
+// 宿題
+// console.log(magicLayerText);
+
+// * マジックレイヤーのクリックイベント
+$('#shoesImg_magicLayer').on('ckick',() => {
+    $('#text_magicLayer').toggleClass('open');
+});
+
+
+$('#shoesImg_cushion').on('click',() => {
+    $('#text_cushion').toggleClass('open');
+});
+
+
+$('#shoesImg_sole').on('click',() => {
+    $('#text_sole').toggleClass('open');
+});
+
+console.log(window.scrollY);
+
+
+
+
+
+
 
 
 

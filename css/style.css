@@ -522,6 +522,7 @@ body.is-nav-open .header-navbtn span::before {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    width: 100%;
 }
 
 @media screen and (min-width: 768px){
