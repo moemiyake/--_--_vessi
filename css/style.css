@@ -1281,21 +1281,22 @@ dl {
 
 
 /* ---------------------------------------------------- */
-/* 追加箇所 */
+/* 追加箇所  by N.k */
 .tecnology-inner img:hover {
     transform: translateY(-5px);
 }
 
 .tecnology__text {
     position: relative;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: height 0.5s ease;
+    transition: max-height 0.5s ease;
 }
 
 .tecnology__text.open {
-    height: 100px;  
+    max-height: 110px;
 }
+/* 100%にしたいけど、トランジションがきかなくなる...? 固定値じゃないとだめみたい。*/
 
 /* ここまで */
 /* ---------------------------------------------------- */
@@ -1423,7 +1424,7 @@ dl {
 
 
     /* ---------------------------------------------------- */
-    /* 追加箇所 */
+    /* 追加箇所  by N.k */
     .tecnology-inner img:hover {
         transform: translateY(-5px);
     }

@@ -252,37 +252,37 @@ $(document).ready(function () {
 
 
 //-------------------------------------------------------------
-// 追加箇所
+// 追加箇所   by K.N
 
-/**
- * マジックレイヤーのクリックイベント
- */
-const magicLayerText = document.getElementById("text_magicLayer");
-document.getElementById("shoesImg_magicLayer").addEventListener("click", () => {
+// /**
+//  * マジックレイヤーのクリックイベント
+//  */
+// const magicLayerText = document.getElementById("text_magicLayer");
+// document.getElementById("shoesImg_magicLayer").addEventListener("click", () => {
 
-        magicLayerText.classList.toggle('open');
+//         magicLayerText.classList.toggle('open');
 
-});
+// });
 
-/**
- * クッションのクリックイベント
- */
-const cushionText = document.getElementById("text_cushion");
-document.getElementById("shoesImg_cushion").addEventListener("click", () => {
+// /**
+//  * クッションのクリックイベント
+//  */
+// const cushionText = document.getElementById("text_cushion");
+// document.getElementById("shoesImg_cushion").addEventListener("click", () => {
 
-        cushionText.classList.toggle('open');
+//         cushionText.classList.toggle('open');
 
-});
+// });
 
-/**
- * ソールのクリックイベント
- */
-const soleText = document.getElementById("text_sole");
-document.getElementById("shoesImg_sole").addEventListener("click", () => {
+// /**
+//  * ソールのクリックイベント
+//  */
+// const soleText = document.getElementById("text_sole");
+// document.getElementById("shoesImg_sole").addEventListener("click", () => {
 
-    soleText.classList.toggle('open');
+//     soleText.classList.toggle('open');
 
-});
+// });
 
 /**
  * スクロールイベント
@@ -338,22 +338,30 @@ window.addEventListener("scroll", () => {
 // 宿題
 // console.log(magicLayerText);
 
-// * マジックレイヤーのクリックイベント
-$('#shoesImg_magicLayer').on('ckick',() => {
+
+
+// マジックレイヤーのクリックイベント
+$('#shoesImg_magicLayer').on('click',() => {
     $('#text_magicLayer').toggleClass('open');
 });
 
-
+// クッションのクリックイベント
 $('#shoesImg_cushion').on('click',() => {
     $('#text_cushion').toggleClass('open');
 });
 
-
+// ソールのクリックイベント
 $('#shoesImg_sole').on('click',() => {
     $('#text_sole').toggleClass('open');
 });
 
+// ↑または、slideToggleを使う！
+
 console.log(window.scrollY);
+
+
+// スクロールイベント
+
 
 
 
