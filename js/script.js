@@ -358,12 +358,35 @@ $('#shoesImg_sole').on('click',() => {
 console.log(window.scrollY);
 
 
+
 // スクロールイベント
-let nowScrollY = window.scrollY;
-console.log(nowScrollY);
+
+// ★ ページ読み込み時の、最初のスクロール位置
+let startScrollY = window.scrollY;
+console.log(startScrollY);
 
     // スクロールイベントを検知する
     $(window).scroll(function(){
+        // 大枠を取得
+        const tecnologyBox = $('.tecnology_scroll');  
+        // ３パーツを取得
+        const tecnologyParts = $('.tecnology-inner'); // $('.class')... querySelectorAll(".class")と同じ
+        
+        // ★ 今のスクロール位置
+        const nowScrollY = window.scrollY;
+        // console.log(nowScrollY);
+
+        // 大枠の位置
+        const tecnologyBoxPosition = tecnologyBox.offset();
+        // パーツ(真ん中)の位置
+        const tecnologyPartsPosition = tecnologyParts.offset();
+        console.log(tecnologyParts[1]);
+        // console.log(tecnologyPartsPosition);
+        
+        
+
+
+
         // .offset()
     });
 
