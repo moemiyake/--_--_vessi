@@ -355,12 +355,19 @@ $('#shoesImg_sole').on('click',() => {
     $('#text_sole').toggleClass('open');
 });
 
-// ↑または、slideToggleを使う！
-
 console.log(window.scrollY);
 
 
 // スクロールイベント
+let nowScrollY = window.scrollY;
+console.log(nowScrollY);
+
+    // スクロールイベントを検知する
+    $(window).scroll(function(){
+        // .offset()
+    });
+
+
 
 
 
