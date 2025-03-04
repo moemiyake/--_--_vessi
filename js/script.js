@@ -315,6 +315,8 @@ window.addEventListener("scroll", () => {
         scrollFlag = true;
     }
 
+    console.log('トリガー' + containerHalfway);
+
     // 各要素の収束
     if (cushionPosition.top <= windowquarter && cushionPosition.bottom >= windowquarter) {
         tecnologyImg[0].style.transform = "translateY(0px)";
@@ -363,8 +365,9 @@ console.log(window.scrollY);
 
 // ★ ページ読み込み時の、最初のスクロール位置
 let startScrollY = window.scrollY;
-console.log(startScrollY);
+console.log('はじめのスクロール位置(Y)は、'+ startScrollY);
 
+$(document).ready(function(){
     // スクロールイベントを検知する
     $(window).scroll(function(){
         // 大枠を取得
@@ -374,14 +377,42 @@ console.log(startScrollY);
         
         // ★ 今のスクロール位置
         const nowScrollY = window.scrollY;
-        // console.log(nowScrollY);
+        console.log('スクロール位置(Y)は、'+ nowScrollY);
 
         // 大枠の位置
         const tecnologyBoxPosition = tecnologyBox.offset();
+        console.log(tecnologyBoxPosition);
         // パーツ(真ん中)の位置
-        const tecnologyPartsPosition = tecnologyParts.offset();
-        console.log(tecnologyParts[1]);
-        // console.log(tecnologyPartsPosition);
+        const tecnologyPartsPosition = tecnologyParts.eq(1).offset();
+        console.log(tecnologyPartsPosition);
+
+        // ウィンドウ 1/4のピクセル数
+        const windowQuarter = window.innerHeight / 4;
+        console.log('1/4の高さは、'+ windowQuarter);
+
+        // アニメーション　開始位置
+        const windowTrigger = tecnologyBoxPosition.top - $(window).scrollTop() + nowScrollY - windowQuarter;
+        console.log('トリガーは、'+ windowTrigger);
+        console.log('画面は、'+ nowScrollY);
+        // windowTrigger数間違えてる？数の意味を再確認
+
+
+        // 分解するアニメーション
+        if (nowScrollY >= windowTrigger){
+            tecnologyParts.eq(0).css('transform','translateY(-80px)');
+            tecnologyParts.eq(2).css('transform','translateY(80px)');
+        }else{
+            tecnologyParts.eq(0).css('transform','translateY(0px)');
+            tecnologyParts.eq(2).css('transform','translateY(0px)');
+            // クラスopenを消す
+        }
+
+
+
+
+
+
+
         
         
 
@@ -389,6 +420,7 @@ console.log(startScrollY);
 
         // .offset()
     });
+});
 
 
 
