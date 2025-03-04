@@ -287,59 +287,60 @@ $(document).ready(function () {
 /**
  * スクロールイベント
  */
-// 前回のスクロール位置
-let lastScrollY = window.scrollY;
-// 下スクロールイベントフラグ
-var scrollFlag = true;
-window.addEventListener("scroll", () => {
-    const tecnologyImg = document.querySelectorAll(".tecnology-inner");
-    const tecnologyContainer = document.querySelector('.tecnology_scroll');
-    // 現在の位置
-    const currentScrollY = window.scrollY;
-    // テクノロジー要素の位置
-    const tecnologyPosition = tecnologyContainer.getBoundingClientRect();
-    // クッション画像の位置
-    const cushionPosition = tecnologyImg[1].getBoundingClientRect();
-    // 画面の25%の位置
-    const windowquarter = window.innerHeight / 4;
-    // アニメーション開始位置
-    const containerHalfway = tecnologyPosition.top + currentScrollY - windowquarter;
+// // 前回のスクロール位置
+// let lastScrollY = window.scrollY;
+// // 下スクロールイベントフラグ
+// var scrollFlag = true;
+// window.addEventListener("scroll", () => {
+//     const tecnologyImg = document.querySelectorAll(".tecnology-inner");
+//     const tecnologyContainer = document.querySelector('.tecnology_scroll');
+//     // 現在の位置
+//     const currentScrollY = window.scrollY;
+//     // テクノロジー要素の位置
+//     const tecnologyPosition = tecnologyContainer.getBoundingClientRect();
+//     // クッション画像の位置
+//     const cushionPosition = tecnologyImg[1].getBoundingClientRect();
+//     // 画面の25%の位置
+//     const windowquarter = window.innerHeight / 4;
+//     // アニメーション開始位置
+//     const containerHalfway = tecnologyPosition.top + currentScrollY - windowquarter;
 
-    // 各要素を離す
-    if (currentScrollY >= containerHalfway && scrollFlag) {
-        scrollFlag = false;
-        tecnologyImg[0].style.transform = "translateY(-80px)";
-        tecnologyImg[2].style.transform = "translateY(80px)";
-    }
-    if (currentScrollY < containerHalfway) {
-        scrollFlag = true;
-    }
+//     // 各要素を離す
+//     if (currentScrollY >= containerHalfway && scrollFlag) {
+//         scrollFlag = false;
+//         tecnologyImg[0].style.transform = "translateY(-80px)";
+//         tecnologyImg[2].style.transform = "translateY(80px)";
+//     }
+//     if (currentScrollY < containerHalfway) {
+//         scrollFlag = true;
+//     }
 
-    console.log('トリガー' + containerHalfway);
 
-    // 各要素の収束
-    if (cushionPosition.top <= windowquarter && cushionPosition.bottom >= windowquarter) {
-        tecnologyImg[0].style.transform = "translateY(0px)";
-        tecnologyImg[2].style.transform = "translateY(0px)";
-        // 表示されているテキストを閉じる
-        magicLayerText.classList.remove('open');
-        cushionText.classList.remove('open');
-        soleText.classList.remove('open');
-        scrollFlag = false;
-    }
+//     // 各要素の収束
+//     if (cushionPosition.top <= windowquarter && cushionPosition.bottom >= windowquarter) {
+//         tecnologyImg[0].style.transform = "translateY(0px)";
+//         tecnologyImg[2].style.transform = "translateY(0px)";
+//         // 表示されているテキストを閉じる
+//         magicLayerText.classList.remove('open');
+//         cushionText.classList.remove('open');
+//         soleText.classList.remove('open');
+//         scrollFlag = false;
+//     }
 
-    // 前回のスクロール位置を更新
-    lastScrollY = currentScrollY;
+//     // 前回のスクロール位置を更新
+//     lastScrollY = currentScrollY;
 
-});
+// });
 
 // ここまで
 //-------------------------------------------------------------
 
 
-// 宿題
-// console.log(magicLayerText);
 
+
+
+//-------------------------------------------------------------
+// jQueryに書き換え by M.M
 
 
 // マジックレイヤーのクリックイベント
@@ -356,8 +357,6 @@ $('#shoesImg_cushion').on('click',() => {
 $('#shoesImg_sole').on('click',() => {
     $('#text_sole').toggleClass('open');
 });
-
-console.log(window.scrollY);
 
 
 
@@ -377,50 +376,50 @@ $(document).ready(function(){
         
         // ★ 今のスクロール位置
         const nowScrollY = window.scrollY;
-        console.log('スクロール位置(Y)は、'+ nowScrollY);
 
         // 大枠の位置
         const tecnologyBoxPosition = tecnologyBox.offset();
-        console.log(tecnologyBoxPosition);
         // パーツ(真ん中)の位置
         const tecnologyPartsPosition = tecnologyParts.eq(1).offset();
-        console.log(tecnologyPartsPosition);
 
         // ウィンドウ 1/4のピクセル数
         const windowQuarter = window.innerHeight / 4;
-        console.log('1/4の高さは、'+ windowQuarter);
+        console.log('1/4の高さは、' + windowQuarter + 'px');
 
         // アニメーション　開始位置
-        const windowTrigger = tecnologyBoxPosition.top - $(window).scrollTop() + nowScrollY - windowQuarter;
+        const windowTrigger = (tecnologyBoxPosition.top - $(window).scrollTop()) + nowScrollY;
         console.log('トリガーは、'+ windowTrigger);
-        console.log('画面は、'+ nowScrollY);
-        // windowTrigger数間違えてる？数の意味を再確認
+        console.log('今のスクロールYは、'+ nowScrollY);
 
 
         // 分解するアニメーション
-        if (nowScrollY >= windowTrigger){
+        if (windowTrigger - windowQuarter <= nowScrollY && nowScrollY <= windowTrigger + windowQuarter
+            ) {
+
+            // パーツ分かれる
             tecnologyParts.eq(0).css('transform','translateY(-80px)');
             tecnologyParts.eq(2).css('transform','translateY(80px)');
+            // Tap!ボタンをつける
+            $('.tecnology__img').addClass('tecnology__img_tap');
+
         }else{
+
+            // パーツ集まる
             tecnologyParts.eq(0).css('transform','translateY(0px)');
             tecnologyParts.eq(2).css('transform','translateY(0px)');
             // クラスopenを消す
+            $('.tecnology__text').removeClass('open');
+            // Tap!ボタンを消す
+            $('.tecnology__img').removeClass('tecnology__img_tap');
+
         }
 
-
-
-
-
-
-
-        
-        
-
-
-
-        // .offset()
     });
 });
+
+// ここまで
+//-------------------------------------------------------------
+
 
 
 
