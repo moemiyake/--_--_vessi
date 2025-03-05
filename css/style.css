@@ -1340,9 +1340,14 @@ dl {
     background-size: contain;
     background-repeat: no-repeat;
 
-    top: 50%;
-    left: 100%;
+    left: 102%;
 }
+
+#shoesImg_magicLayer::after {
+    top: 45%;
+}
+
+
 
 
 @media screen and (min-width: 768px){
@@ -1493,8 +1498,11 @@ dl {
         background-size: contain;
         background-repeat: no-repeat;
     
-        top: 50%;
         left: 95%;
+    }
+
+    #shoesImg_magicLayer::after {
+        top: 55%;
     }
     
 }
