@@ -364,7 +364,7 @@ $('#shoesImg_sole').on('click',() => {
 
 // ★ ページ読み込み時の、最初のスクロール位置
 let startScrollY = window.scrollY;
-console.log('はじめのスクロール位置(Y)は、'+ startScrollY);
+// console.log('はじめのスクロール位置(Y)は、'+ startScrollY);
 
 $(document).ready(function(){
     // スクロールイベントを検知する
@@ -384,12 +384,12 @@ $(document).ready(function(){
 
         // ウィンドウ 1/4のピクセル数
         const windowQuarter = window.innerHeight / 4;
-        console.log('1/4の高さは、' + windowQuarter + 'px');
+        // console.log('1/4の高さは、' + windowQuarter + 'px');
 
         // アニメーション　開始位置
         const windowTrigger = (tecnologyBoxPosition.top - $(window).scrollTop()) + nowScrollY;
-        console.log('トリガーは、'+ windowTrigger);
-        console.log('今のスクロールYは、'+ nowScrollY);
+        // console.log('トリガーは、'+ windowTrigger);
+        // console.log('今のスクロールYは、'+ nowScrollY);
 
 
         // 分解するアニメーション
@@ -469,4 +469,129 @@ $(function () {
     });
   });
 
-  
+
+
+//   --- 4/4 追記 ---
+// JS入門講座から 監視ロボットくんの導入
+
+
+
+
+// --- .fadein の設定 ---
+
+// ロボットにやって欲しい事を設定
+const animateFade = (entries, obs) => {
+    // console.log('じゅわっ');
+
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            // console.log(entry.target);
+
+            entry.target.animate(
+                {
+                    opacity: [0, 1],
+                    filter: ['blur(1rem)','blur(0)'],
+                    // translate: ['0 3rem', 0],
+                },
+                {
+                    duration: 1500,
+                    easing: 'ease',
+                    fill: 'forwards',
+                }
+            );
+
+            // 一回ふわっとさせたら、監視の対象外にする。
+            obs.unobserve(entry.target);
+        }
+    });
+
+};
+
+// 監視ロボット fadeObserber を用意
+const fadeObserber = new IntersectionObserver(animateFade);
+
+// 監視するものを設定
+const fadeElements = document.querySelectorAll('.fadein');
+fadeElements.forEach(element => {
+    fadeObserber.observe(element);
+});
+
+
+// --- .fadein_2 (card) の設定 ---
+
+// ロボットにやって欲しいことを書く
+const animateFade2 = (entries2, obs2) => {
+    // console.log('ふわっ');
+
+    entries2.forEach((entry2) => {
+        if(entry2.isIntersecting){
+            // console.log(entry2.target);
+
+            entry2.target.animate(
+                {
+                    opacity: [0, 1],
+                    filter: ['blur(.5rem)','blur(0)'],
+                    translate: ['0 5rem', 0],
+
+                },
+                {
+                    duration: 1500,
+                    easing: 'ease',
+                    fill: 'forwards',
+                }
+            );
+
+            // 一回ふわっとさせたら、監視の対象外にする。
+            obs2.unobserve(entry2.target);
+        };
+    }) ;
+};
+
+// 監視ロボットを用意
+const fadeObserber2 = new IntersectionObserver(animateFade2);
+
+// 監視するものを設定
+const fadeElements2 = document.querySelectorAll('.fadein_2');
+fadeElements2.forEach(element2 => {
+    fadeObserber2.observe(element2);
+});
+
+
+// --- .fadein_3 (btn) の設定 ---
+
+// ロボットにやって欲しいことを書く
+const animateFade3 = (entries3, obs3) => {
+    // console.log('はやふわっ');
+
+    entries3.forEach((entry3) => {
+        if(entry3.isIntersecting){
+            // console.log(entry3.target);
+
+            entry3.target.animate(
+                {
+                    opacity: [0, 1],
+                    filter: ['blur(.5rem)','blur(0)'],
+                    translate: ['0 3rem', 0],
+
+                },
+                {
+                    duration: 900,
+                    easing: 'ease',
+                    fill: 'forwards',
+                }
+            );
+
+            // 一回ふわっとさせたら、監視の対象外にする。
+            // obs3.unobserve(entry3.target);
+        };
+    }) ;
+};
+
+// 監視ロボットを用意
+const fadeObserber3 = new IntersectionObserver(animateFade3);
+
+// 監視するものを設定
+const fadeElements3 = document.querySelectorAll('.fadein_3');
+fadeElements3.forEach(element3 => {
+    fadeObserber3.observe(element3);
+});
