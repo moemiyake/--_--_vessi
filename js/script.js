@@ -575,14 +575,14 @@ const animateFade3 = (entries3, obs3) => {
 
                 },
                 {
-                    duration: 900,
+                    duration: 800,
                     easing: 'ease',
                     fill: 'forwards',
                 }
             );
 
             // 一回ふわっとさせたら、監視の対象外にする。
-            // obs3.unobserve(entry3.target);
+            obs3.unobserve(entry3.target);
         };
     }) ;
 };
