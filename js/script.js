@@ -494,7 +494,7 @@ const animateFade = (entries, obs) => {
                     // translate: ['0 3rem', 0],
                 },
                 {
-                    duration: 1500,
+                    duration: 1000,
                     easing: 'ease',
                     fill: 'forwards',
                 }
