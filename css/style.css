@@ -2048,3 +2048,8 @@ small {
  .style_body {
     overflow: hidden;
  }
+
+ .hamburger {
+    opacity: 0;
+    translate: 0 3rem;
+ }

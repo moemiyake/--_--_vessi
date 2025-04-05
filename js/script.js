@@ -96,15 +96,15 @@ $(function () {
             audio.play();
         }
     });
-    audio.onplaying = function() {
+    audio.onplaying = function () {
         isPlaying = true;
-    $("#sound_btn").children("img").attr("src", "img/icon/music-play.png");
-    $("#sound_btn").addClass("playing");
+        $("#sound_btn").children("img").attr("src", "img/icon/music-play.png");
+        $("#sound_btn").addClass("playing");
     };
-    audio.onpause = function() {
+    audio.onpause = function () {
         isPlaying = false;
-    $("#sound_btn").children("img").attr("src", "img/icon/music-mute.png");
-    $("#sound_btn").removeClass("playing");
+        $("#sound_btn").children("img").attr("src", "img/icon/music-mute.png");
+        $("#sound_btn").removeClass("playing");
     };
 });
 
@@ -232,7 +232,7 @@ $(document).ready(function () {
 // === PRODUCTS ===
 
 // スニーカー　スライドインアニメ
-    // ウィンドウ内に「product-inner」の上部が150px表示されたら、クラス属性「scrollin」を追加する。
+// ウィンドウ内に「product-inner」の上部が150px表示されたら、クラス属性「scrollin」を追加する。
 $(document).ready(function () {
     $(window).scroll(function () {
         $('.product-inner').each(function () {
@@ -344,17 +344,17 @@ $(document).ready(function () {
 
 
 // マジックレイヤーのクリックイベント
-$('#shoesImg_magicLayer').on('click',() => {
+$('#shoesImg_magicLayer').on('click', () => {
     $('#text_magicLayer').toggleClass('open');
 });
 
 // クッションのクリックイベント
-$('#shoesImg_cushion').on('click',() => {
+$('#shoesImg_cushion').on('click', () => {
     $('#text_cushion').toggleClass('open');
 });
 
 // ソールのクリックイベント
-$('#shoesImg_sole').on('click',() => {
+$('#shoesImg_sole').on('click', () => {
     $('#text_sole').toggleClass('open');
 });
 
@@ -366,14 +366,14 @@ $('#shoesImg_sole').on('click',() => {
 let startScrollY = window.scrollY;
 // console.log('はじめのスクロール位置(Y)は、'+ startScrollY);
 
-$(document).ready(function(){
+$(document).ready(function () {
     // スクロールイベントを検知する
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         // 大枠を取得
-        const tecnologyBox = $('.tecnology_scroll');  
+        const tecnologyBox = $('.tecnology_scroll');
         // ３パーツを取得
         const tecnologyParts = $('.tecnology-inner'); // $('.class')... querySelectorAll(".class")と同じ
-        
+
         // ★ 今のスクロール位置
         const nowScrollY = window.scrollY;
 
@@ -394,19 +394,19 @@ $(document).ready(function(){
 
         // 分解するアニメーション
         if (windowTrigger - windowQuarter <= nowScrollY && nowScrollY <= windowTrigger + windowQuarter
-            ) {
+        ) {
 
             // パーツ分かれる
-            tecnologyParts.eq(0).css('transform','translateY(-80px)');
-            tecnologyParts.eq(2).css('transform','translateY(80px)');
+            tecnologyParts.eq(0).css('transform', 'translateY(-80px)');
+            tecnologyParts.eq(2).css('transform', 'translateY(80px)');
             // Tap!ボタンをつける
             $('.tecnology__img').addClass('tecnology__img_tap');
 
-        }else{
+        } else {
 
             // パーツ集まる
-            tecnologyParts.eq(0).css('transform','translateY(0px)');
-            tecnologyParts.eq(2).css('transform','translateY(0px)');
+            tecnologyParts.eq(0).css('transform', 'translateY(0px)');
+            tecnologyParts.eq(2).css('transform', 'translateY(0px)');
             // クラスopenを消す
             $('.tecnology__text').removeClass('open');
             // Tap!ボタンを消す
@@ -440,34 +440,34 @@ $(document).ready(function(){
 
 
 // === FOOTER ===
-    // TOPに戻るボタン
-    //表示設定
+// TOPに戻るボタン
+//表示設定
 $(function () {
     const pageTop = $("#totop");
 
     pageTop.hide(); // 最初はボタンを非表示にする
     $(window).scroll(function () {
-      if ($(this).scrollTop() > $('#question').offset().top) { // #questionの位置までスクロールしたら表示
-        pageTop.fadeIn(); // 100px以上スクロールしたらボタンをフェードイン
-      } else {
-        pageTop.fadeOut(); // 100px以下になったらボタンをフェードアウト
-      }
+        if ($(this).scrollTop() > $('#question').offset().top) { // #questionの位置までスクロールしたら表示
+            pageTop.fadeIn(); // 100px以上スクロールしたらボタンをフェードイン
+        } else {
+            pageTop.fadeOut(); // 100px以下になったらボタンをフェードアウト
+        }
     });
 
     //クリック時の設定
     pageTop.click(function () {
         //#idをクリックした時、ページの閲覧履歴を残さないようにする
         event.preventDefault();
-        
-      $("body,html").animate(
-        {
-          scrollTop: 0, // 上から0pxの位置に戻る
-        },
-        1500 // 1000ミリ秒かけて戻る
-      );
-      return false;
+
+        $("body,html").animate(
+            {
+                scrollTop: 0, // 上から0pxの位置に戻る
+            },
+            1500 // 1000ミリ秒かけて戻る
+        );
+        return false;
     });
-  });
+});
 
 
 
@@ -484,17 +484,17 @@ const animateFade = (entries, obs) => {
     // console.log('じゅわっ');
 
     entries.forEach((entry) => {
-        if (entry.isIntersecting){
+        if (entry.isIntersecting) {
             // console.log(entry.target);
 
             entry.target.animate(
                 {
                     opacity: [0, 1],
-                    filter: ['blur(1rem)','blur(0)'],
+                    filter: ['blur(1rem)', 'blur(0)'],
                     // translate: ['0 3rem', 0],
                 },
                 {
-                    duration: 1000,
+                    duration: 1200,
                     easing: 'ease',
                     fill: 'forwards',
                 }
@@ -507,8 +507,12 @@ const animateFade = (entries, obs) => {
 
 };
 
+const options = {
+    threshold: 1,
+};
+
 // 監視ロボット fadeObserber を用意
-const fadeObserber = new IntersectionObserver(animateFade);
+const fadeObserber = new IntersectionObserver(animateFade, options);
 
 // 監視するものを設定
 const fadeElements = document.querySelectorAll('.fadein');
@@ -524,13 +528,13 @@ const animateFade2 = (entries2, obs2) => {
     // console.log('ふわっ');
 
     entries2.forEach((entry2) => {
-        if(entry2.isIntersecting){
+        if (entry2.isIntersecting) {
             // console.log(entry2.target);
 
             entry2.target.animate(
                 {
                     opacity: [0, 1],
-                    filter: ['blur(.5rem)','blur(0)'],
+                    filter: ['blur(.5rem)', 'blur(0)'],
                     translate: ['0 5rem', 0],
 
                 },
@@ -544,11 +548,15 @@ const animateFade2 = (entries2, obs2) => {
             // 一回ふわっとさせたら、監視の対象外にする。
             obs2.unobserve(entry2.target);
         };
-    }) ;
+    });
+};
+
+const options2 = {
+    threshold: 0.8,
 };
 
 // 監視ロボットを用意
-const fadeObserber2 = new IntersectionObserver(animateFade2);
+const fadeObserber2 = new IntersectionObserver(animateFade2, options2);
 
 // 監視するものを設定
 const fadeElements2 = document.querySelectorAll('.fadein_2');
@@ -564,13 +572,13 @@ const animateFade3 = (entries3, obs3) => {
     // console.log('はやふわっ');
 
     entries3.forEach((entry3) => {
-        if(entry3.isIntersecting){
+        if (entry3.isIntersecting) {
             // console.log(entry3.target);
 
             entry3.target.animate(
                 {
                     opacity: [0, 1],
-                    filter: ['blur(.5rem)','blur(0)'],
+                    filter: ['blur(.5rem)', 'blur(0)'],
                     translate: ['0 3rem', 0],
 
                 },
@@ -584,14 +592,72 @@ const animateFade3 = (entries3, obs3) => {
             // 一回ふわっとさせたら、監視の対象外にする。
             obs3.unobserve(entry3.target);
         };
-    }) ;
+    });
+};
+
+const options3 = {
+    threshold: 0.5,
 };
 
 // 監視ロボットを用意
-const fadeObserber3 = new IntersectionObserver(animateFade3);
+const fadeObserber3 = new IntersectionObserver(animateFade3, options3);
 
 // 監視するものを設定
 const fadeElements3 = document.querySelectorAll('.fadein_3');
 fadeElements3.forEach(element3 => {
     fadeObserber3.observe(element3);
 });
+
+
+
+
+
+// ロボットにやって欲しい動きを作る
+const showHamburger = (entries4, obs4) => {
+    // console.log(entries4[0].target);
+
+    entries4.forEach((entry4) => {
+        if (entry4.isIntersecting) {
+            // console.log(entry4.target);
+
+
+            // ハンバーガーメニューを順番に表示
+            const hamburger = document.querySelectorAll('.hamburger');
+            // console.log(hamburger);
+
+            for (let i = 0; i < hamburger.length; i++) {
+
+                const hbgKeyframes = {
+                    opacity: [0, 1],
+                    filter: ['blur(.5rem)', 'blur(0)'],
+                    translate: ['0 3rem', 0],
+                };
+
+                const hbgOptions = {
+                    duration: 700,
+                    delay: i * 150,
+                    easing: 'ease',
+                    fill: 'forwards',
+                };
+
+                hamburger[i].animate(hbgKeyframes, hbgOptions);
+
+                // 一回ふわっとさせたら、監視の対象外にする。
+                obs4.unobserve(entry4.target);
+            };
+
+        };
+    });
+
+
+};
+
+const options4 = {
+    threshold: 0.3,
+};
+
+// 監視ロボットを導入する
+const hamburgerObserber = new IntersectionObserver(showHamburger, options4);
+
+// 監視するものを指示する
+hamburgerObserber.observe(document.querySelector('.sp-humburger'));
